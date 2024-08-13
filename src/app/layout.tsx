@@ -1,3 +1,4 @@
+import Header from "@/components/header";
 import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
@@ -31,6 +32,7 @@ export default function RootLayout({
           <ThemeProvider attribute="class">
             <Theme>
               <AnalyticsPageView />
+              <Header />
               {children}
             </Theme>
           </ThemeProvider>
