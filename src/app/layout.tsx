@@ -4,6 +4,7 @@ import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import dynamic from "next/dynamic";
+import { Toaster } from "sonner";
 import { AnalyticsProvider } from "../analytics/analytics-provider";
 import "./globals.css";
 
@@ -34,6 +35,15 @@ export default function RootLayout({
               <AnalyticsPageView />
               <Header />
               {children}
+              <Toaster
+                toastOptions={{
+                  style: {
+                    background: "var(--color-background)",
+                    color: "var(--gray-12)",
+                    borderColor: "var(--gray-6)",
+                  },
+                }}
+              />
             </Theme>
           </ThemeProvider>
         </body>
