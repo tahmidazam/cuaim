@@ -12,6 +12,14 @@ if (typeof window !== "undefined") {
   });
 }
 
+/**
+ * Wraps children in a PostHogProvider for web analytics.
+ *
+ * Adapted from PostHog documentation. Read more:
+ * https://posthog.com/docs/libraries/next-js#app-router
+ * @param param0 The children to wrap.
+ * @returns The wrapped children.
+ */
 export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
   return <PostHogProvider client={posthog}>{children}</PostHogProvider>;
 }

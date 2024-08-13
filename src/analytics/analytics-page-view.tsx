@@ -4,6 +4,13 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { usePostHog } from "posthog-js/react";
 import { useEffect } from "react";
 
+/**
+ * Captures a pageview event on page load.
+ *
+ * Adapted from PostHog documentation. Read more:
+ * https://posthog.com/docs/libraries/next-js#app-router
+ * @returns null
+ */
 export default function AnalyticsPageView(): null {
   const pathname = usePathname();
   const searchParams = useSearchParams();
