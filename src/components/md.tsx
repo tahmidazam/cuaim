@@ -10,6 +10,7 @@ import {
   Text,
 } from "@radix-ui/themes";
 import { Responsive } from "@radix-ui/themes/props";
+import { promises } from "fs";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
 import remarkGfm from "remark-gfm";
@@ -18,7 +19,8 @@ import remarkGfm from "remark-gfm";
  * The props for the `Md` component.
  */
 export interface MdProps {
-  source: string;
+  url?: string;
+  source?: string;
   textColour?:
     | "gray"
     | "gold"
@@ -53,14 +55,27 @@ export interface MdProps {
 }
 
 /**
- * Render markdown content from a string source.
+ * Render markdown content.
+ *
+ * If the `url` prop is provided, the markdown content is asynchronously read
+ * from the url contents. If the source cannot be resolved either from the `url`
+ * prop or the `source` prop, nothing is rendered.
  *
  * The `textColour` property is applied to all text elements with the exception
  * of links.
  * @param param0 The string source and size.
  * @returns The rendered markdown.
  */
-export default async function Md({ source, textSize, textColour }: MdProps) {
+export default async function Md({
+  source,
+  url,
+  textSize,
+  textColour,
+}: MdProps) {
+  if (url) source = await promises.readFile(url, "utf8");
+
+  if (!source) return null;
+
   return (
     <div className="md">
       <MDXRemote
