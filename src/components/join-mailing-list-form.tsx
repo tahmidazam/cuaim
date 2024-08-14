@@ -3,7 +3,6 @@
 import { BASE_URL, LIST_NAME } from "@/constants/join-mailing-list";
 import {
   initialJoinMailingListFormSchema,
-  joinMailingListFormSchema,
   JoinMailingListFormSchema,
 } from "@/schemas/join-mailing-list";
 import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
@@ -32,7 +31,7 @@ export default function JoinMailingListForm() {
 
   const onClick = () => {
     // Run validation on the form state.
-    const result = joinMailingListFormSchema.safeParse(formState);
+    const result = JoinMailingListFormSchema.safeParse(formState);
 
     // If the validation fails, display an error toast and return early.
     if (!result.success) {

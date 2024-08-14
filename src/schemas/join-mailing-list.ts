@@ -1,11 +1,11 @@
 import { z } from "zod";
 
-export const joinMailingListFormSchema = z.object({
+export const JoinMailingListFormSchema = z.object({
   email: z.string().email(),
 });
 
 export type JoinMailingListFormSchema = z.infer<
-  typeof joinMailingListFormSchema
+  typeof JoinMailingListFormSchema
 >;
 
 export const initialJoinMailingListFormSchema: JoinMailingListFormSchema = {
