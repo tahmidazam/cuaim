@@ -19,7 +19,7 @@ import remarkGfm from "remark-gfm";
  */
 export interface MdProps {
   source: string;
-  size?:
+  textSize?:
     | Responsive<"1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9">
     | undefined;
 }
@@ -29,7 +29,7 @@ export interface MdProps {
  * @param param0 The string source and size.
  * @returns The rendered markdown.
  */
-export default async function Md({ source, size }: MdProps) {
+export default async function Md({ source, textSize }: MdProps) {
   return (
     <div className="md">
       <MDXRemote
@@ -43,17 +43,17 @@ export default async function Md({ source, size }: MdProps) {
         components={{
           a: (props) =>
             props.href && (
-              <RadixLink asChild size={size}>
+              <RadixLink asChild size={textSize}>
                 <Link href={props.href}>{props.children}</Link>
               </RadixLink>
             ),
           p: (props) => (
-            <Text as="p" mb={em(20, 16)} mt={em(20, 16)} size={size}>
+            <Text as="p" mb={em(20, 16)} mt={em(20, 16)} size={textSize}>
               {props.children}
             </Text>
           ),
           blockquote: (props) => (
-            <Blockquote size={size}>{props.children}</Blockquote>
+            <Blockquote size={textSize}>{props.children}</Blockquote>
           ),
           ul: (props) => (
             <ul
@@ -108,7 +108,7 @@ export default async function Md({ source, size }: MdProps) {
             </pre>
           ),
           code: (props) => (
-            <Code size={size} variant="ghost">
+            <Code size={textSize} variant="ghost">
               {props.children}
             </Code>
           ),
