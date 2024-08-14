@@ -1,6 +1,9 @@
 "use client";
 
-import { BASE_URL, LIST_NAME } from "@/constants/join-mailing-list";
+import {
+  LIST_NAME,
+  MAILING_LIST_BASE_URL,
+} from "@/constants/join-mailing-list";
 import {
   initialJoinMailingListFormSchema,
   JoinMailingListFormSchema,
@@ -51,7 +54,7 @@ export default function JoinMailingListForm() {
     const encodedEmail: string = encodeURIComponent(email);
 
     // Construct the URL to redirect the user to sympa.
-    const url: string = `${BASE_URL}/${LIST_NAME}?email=${encodedEmail}`;
+    const url: string = `${MAILING_LIST_BASE_URL}/${LIST_NAME}?email=${encodedEmail}`;
 
     // Display a success toast.
     toast.success("Taking you to sympla...");
