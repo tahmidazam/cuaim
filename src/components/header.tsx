@@ -22,7 +22,7 @@ export default function Header() {
       <TabNav.Root className="bg-[var(--color-background)]" justify="center">
         <TabNav.Link
           asChild
-          className="flex sm:absolute sm:left-0 font-medium text-[var(--gray-12)]"
+          className="flex sm:absolute sm:left-0 font-bold text-[var(--accent-11)]"
         >
           <Link href="/">CU AIM</Link>
         </TabNav.Link>
