@@ -9,7 +9,7 @@ import {
 import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 import { Button, TextField } from "@radix-ui/themes";
 import { usePostHog } from "posthog-js/react";
-import { useState } from "react";
+import { ChangeEvent, ChangeEventHandler, useState } from "react";
 import { toast } from "sonner";
 import { z } from "zod";
 
@@ -24,7 +24,9 @@ export default function JoinMailingListForm() {
     initialJoinMailingListFormSchema
   );
 
-  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const onChange: ChangeEventHandler<HTMLInputElement> = (
+    event: ChangeEvent<HTMLInputElement>
+  ) => {
     setFormState({ email: event.target.value });
   };
 
