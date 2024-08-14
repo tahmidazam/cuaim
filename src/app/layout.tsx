@@ -5,7 +5,7 @@ import {
   ExclamationTriangleIcon,
   InfoCircledIcon,
 } from "@radix-ui/react-icons";
-import { Theme } from "@radix-ui/themes";
+import { Flex, Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
@@ -40,9 +40,12 @@ export default function RootLayout({
           <ThemeProvider attribute="class">
             <Theme accentColor="pink">
               <AnalyticsPageView />
-              <Header />
 
-              {children}
+              <Flex className="flex-col min-w-full min-h-screen">
+                <Header />
+
+                <Flex className="flex-col flex-grow">{children}</Flex>
+              </Flex>
 
               <Toaster
                 icons={{
