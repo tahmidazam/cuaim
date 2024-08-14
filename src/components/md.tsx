@@ -19,6 +19,34 @@ import remarkGfm from "remark-gfm";
  */
 export interface MdProps {
   source: string;
+  textColour?:
+    | "gray"
+    | "gold"
+    | "bronze"
+    | "brown"
+    | "yellow"
+    | "amber"
+    | "orange"
+    | "tomato"
+    | "red"
+    | "ruby"
+    | "crimson"
+    | "pink"
+    | "plum"
+    | "purple"
+    | "violet"
+    | "iris"
+    | "indigo"
+    | "blue"
+    | "cyan"
+    | "teal"
+    | "jade"
+    | "green"
+    | "grass"
+    | "lime"
+    | "mint"
+    | "sky"
+    | undefined;
   textSize?:
     | Responsive<"1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9">
     | undefined;
@@ -26,10 +54,13 @@ export interface MdProps {
 
 /**
  * Render markdown content from a string source.
+ *
+ * The `textColour` property is applied to all text elements with the exception
+ * of links.
  * @param param0 The string source and size.
  * @returns The rendered markdown.
  */
-export default async function Md({ source, textSize }: MdProps) {
+export default async function Md({ source, textSize, textColour }: MdProps) {
   return (
     <div className="md">
       <MDXRemote
@@ -43,12 +74,18 @@ export default async function Md({ source, textSize }: MdProps) {
         components={{
           a: (props) =>
             props.href && (
-              <RadixLink asChild size={textSize}>
+              <RadixLink asChild size={textSize} color="pink">
                 <Link href={props.href}>{props.children}</Link>
               </RadixLink>
             ),
           p: (props) => (
-            <Text as="p" mb={em(20, 16)} mt={em(20, 16)} size={textSize}>
+            <Text
+              as="p"
+              mb={em(20, 16)}
+              mt={em(20, 16)}
+              size={textSize}
+              color={textColour}
+            >
               {props.children}
             </Text>
           ),
@@ -108,13 +145,14 @@ export default async function Md({ source, textSize }: MdProps) {
             </pre>
           ),
           code: (props) => (
-            <Code size={textSize} variant="ghost">
+            <Code size={textSize} variant="ghost" color={textColour}>
               {props.children}
             </Code>
           ),
           h1: (props) => (
             <Heading
               as="h1"
+              color={textColour}
               style={{
                 fontSize: em(36, 16),
                 marginTop: "0",
@@ -128,6 +166,7 @@ export default async function Md({ source, textSize }: MdProps) {
           h2: (props) => (
             <Heading
               as="h2"
+              color={textColour}
               style={{
                 fontSize: em(24, 16),
                 marginTop: em(48, 24),
@@ -141,6 +180,7 @@ export default async function Md({ source, textSize }: MdProps) {
           h3: (props) => (
             <Heading
               as="h3"
+              color={textColour}
               style={{
                 fontSize: em(20, 16),
                 marginTop: em(32, 20),
@@ -154,6 +194,7 @@ export default async function Md({ source, textSize }: MdProps) {
           h4: (props) => (
             <Heading
               as="h3"
+              color={textColour}
               style={{
                 marginTop: em(24, 16),
                 marginBottom: em(8, 16),
