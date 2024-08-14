@@ -14,8 +14,8 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 /**
- * The form to join the CU AIM's mailing list on sympa, with validation and
- * redirection.
+ * The form to join the CU AIM's mailing list on sympa, the University's mailing
+ * list service, with validation and redirection.
  * @returns The form to join the mailing list.
  */
 export default function JoinMailingListForm() {
