@@ -12,6 +12,7 @@ import { ThemeProvider } from "next-themes";
 import dynamic from "next/dynamic";
 import { Toaster } from "sonner";
 import { AnalyticsProvider } from "../analytics/analytics-provider";
+import "./../css/colours.css";
 import "./globals.css";
 
 const AnalyticsPageView = dynamic(
@@ -37,7 +38,7 @@ export default function RootLayout({
       <AnalyticsProvider>
         <body>
           <ThemeProvider attribute="class">
-            <Theme>
+            <Theme accentColor="pink">
               <AnalyticsPageView />
               <Header />
 

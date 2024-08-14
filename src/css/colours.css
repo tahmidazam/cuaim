@@ -1,0 +1,145 @@
+:root,
+.light,
+.light-theme {
+  --pink-1: #fffbfe;
+  --pink-2: #fff5fc;
+  --pink-3: #ffe5f6;
+  --pink-4: #ffd5ef;
+  --pink-5: #ffc3e8;
+  --pink-6: #ffaee1;
+  --pink-7: #ff92d7;
+  --pink-8: #ff6dcb;
+  --pink-9: #ff66c4;
+  --pink-10: #f25ab8;
+  --pink-11: #c0268d;
+  --pink-12: #6d004b;
+
+  --pink-a1: #ff00c004;
+  --pink-a2: #ff00b30a;
+  --pink-a3: #ff00a71a;
+  --pink-a4: #ff009e2a;
+  --pink-a5: #ff009e3c;
+  --pink-a6: #ff00a151;
+  --pink-a7: #ff00a26d;
+  --pink-a8: #ff00a592;
+  --pink-a9: #ff009d99;
+  --pink-a10: #eb0092a5;
+  --pink-a11: #b50079d9;
+  --pink-a12: #6d004b;
+
+  --pink-contrast: #fff;
+  --pink-surface: #fff3fbcc;
+  --pink-indicator: #ff66c4;
+  --pink-track: #ff66c4;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root,
+    .light,
+    .light-theme {
+      --pink-1: oklch(99.4% 0.008 345.7);
+      --pink-2: oklch(98.3% 0.018 345.7);
+      --pink-3: oklch(95.4% 0.054 345.7);
+      --pink-4: oklch(92.5% 0.081 345.7);
+      --pink-5: oklch(89.4% 0.106 345.7);
+      --pink-6: oklch(85.6% 0.131 345.7);
+      --pink-7: oklch(80.9% 0.163 345.7);
+      --pink-8: oklch(75.1% 0.21 345.7);
+      --pink-9: oklch(73.1% 0.21 345.7);
+      --pink-10: oklch(69.4% 0.21 345.7);
+      --pink-11: oklch(55.4% 0.21 345.7);
+      --pink-12: oklch(34.9% 0.21 345.7);
+
+      --pink-a1: color(display-p3 0.757 0.024 0.757 / 0.016);
+      --pink-a2: color(display-p3 0.808 0.024 0.71 / 0.04);
+      --pink-a3: color(display-p3 0.843 0.012 0.604 / 0.099);
+      --pink-a4: color(display-p3 0.827 0.004 0.576 / 0.157);
+      --pink-a5: color(display-p3 0.847 0.004 0.573 / 0.228);
+      --pink-a6: color(display-p3 0.847 0.004 0.58 / 0.306);
+      --pink-a7: color(display-p3 0.859 0.004 0.588 / 0.408);
+      --pink-a8: color(display-p3 0.871 0 0.592 / 0.538);
+      --pink-a9: color(display-p3 0.875 0 0.561 / 0.561);
+      --pink-a10: color(display-p3 0.8 0 0.518 / 0.608);
+      --pink-a11: color(display-p3 0.612 0 0.42 / 0.793);
+      --pink-a12: color(display-p3 0.349 0 0.239 / 0.938);
+
+      --pink-contrast: #fff;
+      --pink-surface: color(display-p3 1 0.953 0.988 / 0.8);
+      --pink-indicator: oklch(73.1% 0.21 345.7);
+      --pink-track: oklch(73.1% 0.21 345.7);
+    }
+  }
+}
+
+.dark,
+.dark-theme {
+  --pink-1: #170e13;
+  --pink-2: #22111a;
+  --pink-3: #3a132b;
+  --pink-4: #500b39;
+  --pink-5: #5e1344;
+  --pink-6: #6f2152;
+  --pink-7: #893067;
+  --pink-8: #b03d85;
+  --pink-9: #ff66c4;
+  --pink-10: #f25ab8;
+  --pink-11: #ff82d3;
+  --pink-12: #ffcfea;
+
+  --pink-a1: #ec005a07;
+  --pink-a2: #f6118a13;
+  --pink-a3: #ff1da82c;
+  --pink-a4: #fe00a744;
+  --pink-a5: #fe18ae53;
+  --pink-a6: #ff3ab665;
+  --pink-a7: #ff4fbb81;
+  --pink-a8: #fe52beab;
+  --pink-a9: #ff66c4;
+  --pink-a10: #fe5ec1f2;
+  --pink-a11: #ff82d3;
+  --pink-a12: #ffcfea;
+
+  --pink-contrast: #fff;
+  --pink-surface: #33112380;
+  --pink-indicator: #ff66c4;
+  --pink-track: #ff66c4;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    .dark,
+    .dark-theme {
+      --pink-1: oklch(17.8% 0.019 345.7);
+      --pink-2: oklch(20.5% 0.033 345.7);
+      --pink-3: oklch(25.9% 0.07 345.7);
+      --pink-4: oklch(29.7% 0.111 345.7);
+      --pink-5: oklch(33.6% 0.12 345.7);
+      --pink-6: oklch(38.7% 0.124 345.7);
+      --pink-7: oklch(45.6% 0.137 345.7);
+      --pink-8: oklch(54.4% 0.168 345.7);
+      --pink-9: oklch(73.1% 0.21 345.7);
+      --pink-10: oklch(69.4% 0.21 345.7);
+      --pink-11: oklch(78.8% 0.21 345.7);
+      --pink-12: oklch(90.6% 0.066 345.7);
+
+      --pink-a1: color(display-p3 0.961 0 0.424 / 0.022);
+      --pink-a2: color(display-p3 0.988 0.129 0.62 / 0.064);
+      --pink-a3: color(display-p3 0.996 0.173 0.714 / 0.152);
+      --pink-a4: color(display-p3 1 0.086 0.702 / 0.236);
+      --pink-a5: color(display-p3 1 0.176 0.729 / 0.29);
+      --pink-a6: color(display-p3 1 0.31 0.757 / 0.358);
+      --pink-a7: color(display-p3 1 0.38 0.78 / 0.463);
+      --pink-a8: color(display-p3 0.996 0.396 0.788 / 0.614);
+      --pink-a9: color(display-p3 1 0.471 0.812 / 0.925);
+      --pink-a10: color(display-p3 1 0.443 0.804 / 0.87);
+      --pink-a11: color(display-p3 1 0.573 0.867 / 0.933);
+      --pink-a12: color(display-p3 0.996 0.843 0.941 / 0.967);
+
+      --pink-contrast: #fff;
+      --pink-surface: color(display-p3 0.18 0.071 0.133 / 0.5);
+      --pink-indicator: oklch(73.1% 0.21 345.7);
+      --pink-track: oklch(73.1% 0.21 345.7);
+    }
+  }
+}
