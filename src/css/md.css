@@ -1,7 +1,11 @@
+/* CSS for the `Md` component. */
+
+/* Remove the `margin-top` from the first rendered markdown component. */
 .md > :first-child {
   margin-top: 0;
 }
 
+/* Remove the `margin-bottom` from the last rendered markdown component. */
 .md > :last-child {
   margin-bottom: 0;
 }
