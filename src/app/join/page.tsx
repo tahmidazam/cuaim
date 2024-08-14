@@ -14,7 +14,7 @@ import { Suspense } from "react";
 /**
  * A page to join the mailing list.
  */
-export default async function Join() {
+export default async function JoinPage() {
   return (
     <Section>
       <Container size="1" className="px-2">
