@@ -7,7 +7,7 @@ import {
   JoinMailingListFormSchema,
 } from "@/schemas/join-mailing-list";
 import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
-import { Button, TextField } from "@radix-ui/themes";
+import { Button, Flex, TextField } from "@radix-ui/themes";
 import { usePostHog } from "posthog-js/react";
 import { ChangeEvent, ChangeEventHandler, useState } from "react";
 import { toast } from "sonner";
@@ -65,18 +65,21 @@ export default function JoinMailingListForm() {
   };
 
   return (
-    <>
+    <Flex direction="row" className="gap-4">
       <TextField.Root
         placeholder="example@domain.com"
         onChange={onChange}
         value={formState.email}
+        className="flex-grow"
       >
         <TextField.Slot>
           <EnvelopeClosedIcon color="gray" />
         </TextField.Slot>
       </TextField.Root>
 
-      <Button onClick={onClick}>Join mailing list</Button>
-    </>
+      <Button className="flex-grow-0" onClick={onClick}>
+        Continue
+      </Button>
+    </Flex>
   );
 }
