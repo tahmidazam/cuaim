@@ -1,17 +1,10 @@
 import EventTable from "@/components/event-table";
+import PageHeader from "@/components/page-header";
 import { GOOGLE_CALENDAR_BASE_URL } from "@/constants/events";
 import { Event, EventsResponseSchema } from "@/schemas/events-response";
 import groupByDate from "@/utils/groupByDate";
 import { CalendarIcon, UpdateIcon } from "@radix-ui/react-icons";
-import {
-  Button,
-  Container,
-  Flex,
-  Grid,
-  Heading,
-  Section,
-  Text,
-} from "@radix-ui/themes";
+import { Button, Container, Flex, Grid, Section } from "@radix-ui/themes";
 import Link from "next/link";
 
 /**
@@ -39,33 +32,25 @@ export default async function EventsPage() {
 
   return (
     <>
-      <Section>
-        <Container size="1">
-          <Flex className="flex-col justify-center gap-4">
-            <Heading className="text-center">Events</Heading>
+      <PageHeader title="Events" subtitle="Explore our upcoming events.">
+        <Flex className="gap-2 justify-center">
+          {process.env.GOOGLE_CALENDAR_PUBLIC_ICAL_ADDRESS && (
+            <Button asChild>
+              <Link href={process.env.GOOGLE_CALENDAR_PUBLIC_ICAL_ADDRESS}>
+                <UpdateIcon /> Sync Calendar
+              </Link>
+            </Button>
+          )}
 
-            <Text className="text-center">Explore our upcoming events.</Text>
-
-            <Flex className="gap-2 justify-center">
-              {process.env.GOOGLE_CALENDAR_PUBLIC_ICAL_ADDRESS && (
-                <Button asChild>
-                  <Link href={process.env.GOOGLE_CALENDAR_PUBLIC_ICAL_ADDRESS}>
-                    <UpdateIcon /> Sync Calendar
-                  </Link>
-                </Button>
-              )}
-
-              {process.env.GOOGLE_CALENDAR_SHAREABLE_LINK && (
-                <Button variant="soft" asChild>
-                  <Link href={process.env.GOOGLE_CALENDAR_SHAREABLE_LINK}>
-                    <CalendarIcon /> Visit Calendar
-                  </Link>
-                </Button>
-              )}
-            </Flex>
-          </Flex>
-        </Container>
-      </Section>
+          {process.env.GOOGLE_CALENDAR_SHAREABLE_LINK && (
+            <Button variant="soft" asChild>
+              <Link href={process.env.GOOGLE_CALENDAR_SHAREABLE_LINK}>
+                <CalendarIcon /> Visit Calendar
+              </Link>
+            </Button>
+          )}
+        </Flex>
+      </PageHeader>
 
       <Section>
         <Container>
