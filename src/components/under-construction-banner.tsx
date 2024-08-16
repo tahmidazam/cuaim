@@ -1,4 +1,4 @@
-import { Container, Flex, Separator } from "@radix-ui/themes";
+import { Flex, Separator } from "@radix-ui/themes";
 import Md from "./md";
 
 /**
@@ -7,12 +7,8 @@ import Md from "./md";
 export default function UnderConstructionBanner() {
   return (
     <>
-      <Flex className="bg-[var(--pink-2)] p-2">
-        <Container>
-          <Flex className="items-center gap-4 max-w-[100dvw]">
-            <Md filename="feedback" textSize="1" />
-          </Flex>
-        </Container>
+      <Flex className="bg-[var(--pink-2)] p-2 justify-center">
+        <Md filename="feedback" textSize="1" />
       </Flex>
 
       <Separator className="w-full" />
