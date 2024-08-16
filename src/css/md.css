@@ -9,3 +9,8 @@
 .md > :last-child {
   margin-bottom: 0;
 }
+
+/* Ensure that code tags inside anchor tags inherit its colour. */
+.md a code {
+  color: inherit;
+}
