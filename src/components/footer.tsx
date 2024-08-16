@@ -16,8 +16,8 @@ export default function Footer() {
             <Text>Sitemap</Text>
 
             <Flex className="flex-col">
-              {tabs.map(({ href, label }: LabelledHref) => (
-                <RadixLink asChild size="2">
+              {tabs.map(({ href, label }: LabelledHref, index: number) => (
+                <RadixLink key={index} asChild size="2">
                   <Link href={href}>{label}</Link>
                 </RadixLink>
               ))}
