@@ -10,11 +10,11 @@ import {
   Text,
 } from "@radix-ui/themes";
 import { Responsive } from "@radix-ui/themes/props";
-import { sanitize } from "dompurify";
 import { promises } from "fs";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
 import remarkGfm from "remark-gfm";
+import sanitizeHtml from "sanitize-html";
 import TurndownService from "turndown";
 
 /**
@@ -81,7 +81,7 @@ export default async function Md({
 }: MdProps) {
   if (html) {
     // Sanitize the HTML to prevent XSS attacks.
-    const sanitizedHtml = sanitize(html);
+    const sanitizedHtml = sanitizeHtml(html);
 
     // Convert the sanitized HTML to markdown.
     var turndownService = new TurndownService();
