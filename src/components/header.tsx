@@ -18,7 +18,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <Box className="sticky top-0">
+    <Box className="sticky top-0 z-10">
       <TabNav.Root className="bg-[var(--color-background)]" justify="center">
         <TabNav.Link
           asChild
