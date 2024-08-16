@@ -10,15 +10,18 @@ import {
   Text,
 } from "@radix-ui/themes";
 import { Responsive } from "@radix-ui/themes/props";
+import { sanitize } from "dompurify";
 import { promises } from "fs";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
 import remarkGfm from "remark-gfm";
+import TurndownService from "turndown";
 
 /**
  * The props for the `Md` component.
  */
 export interface MdProps {
+  html?: string;
   url?: string;
   source?: string;
   textColour?:
@@ -55,23 +58,37 @@ export interface MdProps {
 }
 
 /**
- * Render markdown content.
+ * Render markdown content from a source, a URL, or HTML.
  *
- * If the `url` prop is provided, the markdown content is asynchronously read
- * from the url contents. If the source cannot be resolved either from the `url`
- * prop or the `source` prop, nothing is rendered.
+ * - HTML content is sanitised and converted to markdown.
+ * - The file contents of the URL are read asynchronously.
+ * - The source is rendered directly as markdown.
+ *
+ * Note a provided HTML or URL overrides the source property, and a URL
+ * overrides the HTML property.
  *
  * The `textColour` property is applied to all text elements with the exception
  * of links.
  * @param param0 The string source and size.
- * @returns The rendered markdown.
+ * @returns The rendered markdown if a source can be resolved, otherwise null.
  */
 export default async function Md({
+  html,
   source,
   url,
   textSize,
   textColour,
 }: MdProps) {
+  if (html) {
+    // Sanitize the HTML to prevent XSS attacks.
+    const sanitizedHtml = sanitize(html);
+
+    // Convert the sanitized HTML to markdown.
+    var turndownService = new TurndownService();
+
+    source = turndownService.turndown(sanitizedHtml);
+  }
+
   if (url) source = await promises.readFile(url, "utf8");
 
   if (!source) return null;
