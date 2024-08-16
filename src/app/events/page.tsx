@@ -27,7 +27,7 @@ export default async function EventsPage() {
   const result = EventsResponseSchema.safeParse(data);
 
   if (!result.success) {
-    return null;
+    return <>{JSON.stringify(data)}</>;
   }
 
   const eventsResponse = result.data;

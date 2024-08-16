@@ -10,9 +10,10 @@ import {
   Text,
 } from "@radix-ui/themes";
 import { Responsive } from "@radix-ui/themes/props";
-import { readFileSync } from "fs";
+import { promises } from "fs";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
+import path from "path";
 import remarkGfm from "remark-gfm";
 import sanitizeHtml from "sanitize-html";
 import TurndownService from "turndown";
@@ -22,7 +23,7 @@ import TurndownService from "turndown";
  */
 export interface MdProps {
   html?: string;
-  url?: string;
+  filename?: string;
   source?: string;
   textColour?:
     | "gray"
@@ -58,14 +59,15 @@ export interface MdProps {
 }
 
 /**
- * Render markdown content from a source, a URL, or HTML.
+ * Render markdown content from a source, a filename from the public folder, or
+ * HTML.
  *
  * - HTML content is sanitised and converted to markdown.
- * - The file contents of the URL are read asynchronously.
+ * - The file contents of the filename are read asynchronously.
  * - The source is rendered directly as markdown.
  *
- * Note a provided HTML or URL overrides the source property, and a URL
- * overrides the HTML property.
+ * Note a provided HTML or filename overrides the source property, and a
+ * filename overrides the HTML property.
  *
  * The `textColour` property is applied to all text elements with the exception
  * of links.
@@ -75,7 +77,7 @@ export interface MdProps {
 export default async function Md({
   html,
   source,
-  url,
+  filename,
   textSize,
   textColour,
 }: MdProps) {
@@ -89,7 +91,11 @@ export default async function Md({
     source = turndownService.turndown(sanitizedHtml);
   }
 
-  if (url) source = readFileSync(url, "utf-8");
+  if (filename)
+    source = await promises.readFile(
+      path.join(process.cwd(), "public", `${filename}.mdx`),
+      "utf8"
+    );
 
   if (!source) return null;
 

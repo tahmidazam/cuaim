@@ -29,7 +29,7 @@ export default async function JoinPage() {
           <Separator className="w-full" />
 
           <Suspense fallback={<Spinner />}>
-            <Md url="public/join.mdx" textSize="1" textColour="gray" />
+            <Md filename="join" textSize="1" textColour="gray" />
           </Suspense>
         </Flex>
       </Container>

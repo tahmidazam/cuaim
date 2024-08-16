@@ -10,7 +10,7 @@ export default function UnderConstructionBanner() {
       <Flex className="bg-[var(--pink-2)] p-2">
         <Container>
           <Flex className="items-center gap-4 max-w-[100dvw]">
-            <Md url="public/feedback.mdx" textSize="1" />
+            <Md filename="feedback" textSize="1" />
           </Flex>
         </Container>
       </Flex>

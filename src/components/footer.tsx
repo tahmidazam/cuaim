@@ -24,7 +24,7 @@ export default function Footer() {
             </Flex>
           </Flex>
 
-          <Md url="public/credits.mdx" textColour="gray" textSize="1" />
+          <Md filename="credits" textColour="gray" textSize="1" />
         </Flex>
       </Container>
     </Flex>
