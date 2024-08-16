@@ -70,6 +70,7 @@ export default function JoinMailingListForm() {
     <Flex direction="row" className="gap-4">
       <TextField.Root
         placeholder="example@domain.com"
+        type="email"
         onChange={onChange}
         value={formState.email}
         className="flex-grow"
