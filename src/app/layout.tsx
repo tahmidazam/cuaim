@@ -1,11 +1,13 @@
+import Footer from "@/components/footer";
 import Header from "@/components/header";
+import UnderConstructionBanner from "@/components/under-construction-banner";
 import {
   CheckCircledIcon,
   CrossCircledIcon,
   ExclamationTriangleIcon,
   InfoCircledIcon,
 } from "@radix-ui/react-icons";
-import { Flex, Theme } from "@radix-ui/themes";
+import { Flex, Separator, Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
@@ -41,10 +43,17 @@ export default function RootLayout({
             <Theme accentColor="pink">
               <AnalyticsPageView />
 
-              <Flex className="flex-col min-w-full min-h-screen">
-                <Header />
+              <Flex className="flex-col">
+                <Flex className="flex-col min-w-full min-h-screen">
+                  <UnderConstructionBanner />
 
-                <Flex className="flex-col flex-grow">{children}</Flex>
+                  <Header />
+                  <Flex className="flex-col flex-grow">{children}</Flex>
+                </Flex>
+
+                <Separator className="w-full" />
+
+                <Footer />
               </Flex>
 
               <Toaster
