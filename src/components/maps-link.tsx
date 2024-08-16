@@ -22,11 +22,13 @@ export default function MapsLink({ location }: { location?: string }) {
       </DropdownMenu.Trigger>
 
       <DropdownMenu.Content>
-        {mappingProviders.map(({ label, href: baseUrl }: LabelledHref) => (
-          <DropdownMenu.Item asChild>
-            <Link href={`${baseUrl}${encodedLocation}`}>{label}</Link>
-          </DropdownMenu.Item>
-        ))}
+        {mappingProviders.map(
+          ({ label, href: baseUrl }: LabelledHref, index: number) => (
+            <DropdownMenu.Item asChild key={index}>
+              <Link href={`${baseUrl}${encodedLocation}`}>{label}</Link>
+            </DropdownMenu.Item>
+          )
+        )}
       </DropdownMenu.Content>
     </DropdownMenu.Root>
   );
