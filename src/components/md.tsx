@@ -10,7 +10,7 @@ import {
   Text,
 } from "@radix-ui/themes";
 import { Responsive } from "@radix-ui/themes/props";
-import { promises } from "fs";
+import { readFileSync } from "fs";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
 import remarkGfm from "remark-gfm";
@@ -89,7 +89,7 @@ export default async function Md({
     source = turndownService.turndown(sanitizedHtml);
   }
 
-  if (url) source = await promises.readFile(url, "utf8");
+  if (url) source = readFileSync(url, "utf-8");
 
   if (!source) return null;
 
