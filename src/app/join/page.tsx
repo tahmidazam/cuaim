@@ -11,7 +11,7 @@ export default async function JoinPage() {
     <>
       <PageHeader
         title="Join the mailing list"
-        subtitle="Updates where they belong, in your inbox."
+        subtitle="All the updates straight to your inbox."
       />
 
       <Section>
