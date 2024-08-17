@@ -21,7 +21,7 @@ export default function EventTableRow({ event }: { event: Event }) {
   )}, ${format(event.start.dateTime, "d MMM yy")}`;
 
   return (
-    <Table.Row key={event.id}>
+    <Table.Row key={event.id} className="hover:bg-[var(--gray-2)]">
       <Table.Cell>
         <Flex className="flex-col gap-4">
           <Flex className="flex-col">
@@ -31,7 +31,12 @@ export default function EventTableRow({ event }: { event: Event }) {
           </Flex>
 
           {(event.location || event.description) && (
-            <DataList.Root>
+            <DataList.Root
+              orientation={{
+                initial: "vertical",
+                sm: "horizontal",
+              }}
+            >
               {event.location && (
                 <DataList.Item>
                   <DataList.Label>Location</DataList.Label>
