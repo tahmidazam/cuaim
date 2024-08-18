@@ -6,6 +6,7 @@ The code repository for the official website of Cambridge University's Artificia
 - [PostHog](https://posthog.com) for web analytics;
 - [Radix Themes](https://www.radix-ui.com) as the UI library;
 - [Radix Icons](https://www.radix-ui.com/icons) as the icon library;
+- [Framer Motion](https://www.framer.com/motion/) as the animation library
 - [MDX](https://mdxjs.com) as markup language for prose content;
 - [Zod](https://zod.dev) for data declaration and validation;
 - [Sonner](https://sonner.emilkowal.ski) for rendering toasts; and
