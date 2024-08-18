@@ -39,13 +39,18 @@ export default function Home() {
 
             <BlurEntry delayIndex={3}>
               <Button
+                asChild
                 variant="soft"
                 size={{
                   initial: "2",
                   sm: "4",
                 }}
               >
-                <UpdateIcon /> Sync calendar
+                <Link
+                  href={`https://calendar.google.com/calendar/ical/${process.env.GOOGLE_CALENDAR_ID}/public/basic.ics`}
+                >
+                  <UpdateIcon /> Sync Calendar
+                </Link>
               </Button>
             </BlurEntry>
           </Flex>
