@@ -1,3 +1,4 @@
+import BlurEntry from "@/components/blur-entry";
 import Hero from "@/components/hero";
 import { ArrowRightIcon, UpdateIcon } from "@radix-ui/react-icons";
 import { Badge, Button, Flex } from "@radix-ui/themes";
@@ -24,32 +25,38 @@ export default function Home() {
               sm: "center",
             }}
           >
-            <Button
-              asChild
-              size={{
-                initial: "2",
-                sm: "4",
-              }}
-            >
-              <Link href="/join">Join mailing list</Link>
-            </Button>
+            <BlurEntry delayIndex={2}>
+              <Button
+                asChild
+                size={{
+                  initial: "2",
+                  sm: "4",
+                }}
+              >
+                <Link href="/join">Join mailing list</Link>
+              </Button>
+            </BlurEntry>
 
-            <Button
-              variant="soft"
-              size={{
-                initial: "2",
-                sm: "4",
-              }}
-            >
-              <UpdateIcon /> Sync calendar
-            </Button>
+            <BlurEntry delayIndex={3}>
+              <Button
+                variant="soft"
+                size={{
+                  initial: "2",
+                  sm: "4",
+                }}
+              >
+                <UpdateIcon /> Sync calendar
+              </Button>
+            </BlurEntry>
           </Flex>
 
-          <Link href="/committee">
-            <Badge size="3" radius="full" variant="surface">
-              🎉 Meet our 2024 Committee <ArrowRightIcon />
-            </Badge>
-          </Link>
+          <BlurEntry delayIndex={4}>
+            <Link href="/committee">
+              <Badge size="3" radius="full" variant="surface">
+                🎉 Meet our 2024 Committee <ArrowRightIcon />
+              </Badge>
+            </Link>
+          </BlurEntry>
         </Flex>
       </Hero>
     </main>

@@ -1,4 +1,5 @@
 import { Container, Flex, Heading, Section, Text } from "@radix-ui/themes";
+import BlurEntry from "./blur-entry";
 
 /** The props for the `Hero` component. */
 export interface HeroProps {
@@ -34,32 +35,36 @@ export default function Hero({ primary, secondary, children }: HeroProps) {
               sm: "center",
             }}
           >
-            <Text
-              size={{
-                initial: "4",
-                sm: "6",
-              }}
-              align={{
-                initial: "left",
-                sm: "center",
-              }}
-              wrap="balance"
-            >
-              {secondary}
-            </Text>
+            <BlurEntry>
+              <Text
+                size={{
+                  initial: "4",
+                  sm: "6",
+                }}
+                align={{
+                  initial: "left",
+                  sm: "center",
+                }}
+                wrap="balance"
+              >
+                {secondary}
+              </Text>
+            </BlurEntry>
 
-            <Heading
-              size={{
-                initial: "8",
-                sm: "9",
-              }}
-              align={{
-                initial: "left",
-                sm: "center",
-              }}
-            >
-              {primary}
-            </Heading>
+            <BlurEntry delayIndex={1}>
+              <Heading
+                size={{
+                  initial: "8",
+                  sm: "9",
+                }}
+                align={{
+                  initial: "left",
+                  sm: "center",
+                }}
+              >
+                {primary}
+              </Heading>
+            </BlurEntry>
           </Flex>
 
           {children && children}
