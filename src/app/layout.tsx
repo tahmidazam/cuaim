@@ -9,6 +9,7 @@ import {
 } from "@radix-ui/react-icons";
 import { Flex, Separator, Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import dynamic from "next/dynamic";
@@ -42,6 +43,7 @@ export default function RootLayout({
           <ThemeProvider attribute="class">
             <Theme accentColor="pink">
               <AnalyticsPageView />
+              <SpeedInsights />
 
               <Flex className="flex-col w-screen">
                 <Flex className="flex-col min-h-screen">
