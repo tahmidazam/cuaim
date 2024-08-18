@@ -89,7 +89,12 @@ export default function EventDataList({
             <DataList.Value>
               <Flex className="w-full flex-wrap">
                 {event.attachments?.map((attachment: Attachment) => (
-                  <Badge radius="full" variant="surface" asChild>
+                  <Badge
+                    radius="full"
+                    variant="surface"
+                    asChild
+                    key={attachment.fileId}
+                  >
                     <Link href={attachment.fileUrl}>{attachment.title}</Link>
                   </Badge>
                 ))}
