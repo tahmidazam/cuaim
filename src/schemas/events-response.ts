@@ -7,7 +7,7 @@ export const DefaultReminderSchema = z.object({
   method: z.string(),
   minutes: z.number(),
 });
-export type DefaultReminderSchema = z.infer<typeof DefaultReminderSchema>;
+export type DefaultReminder = z.infer<typeof DefaultReminderSchema>;
 
 const CreatorSchema = z.object({
   id: z.string().optional(),
@@ -15,7 +15,7 @@ const CreatorSchema = z.object({
   displayName: z.string().optional(),
   self: z.boolean().optional(),
 });
-export type CreatorSchema = z.infer<typeof CreatorSchema>;
+export type Creator = z.infer<typeof CreatorSchema>;
 
 const OrganizerSchema = z.object({
   id: z.string().optional(),
@@ -23,28 +23,28 @@ const OrganizerSchema = z.object({
   displayName: z.string(),
   self: z.boolean(),
 });
-export type OrganizerSchema = z.infer<typeof OrganizerSchema>;
+export type Organizer = z.infer<typeof OrganizerSchema>;
 
 const StartSchema = z.object({
   date: z.coerce.date().optional(),
   dateTime: z.coerce.date(),
   timeZone: z.string(),
 });
-export type StartSchema = z.infer<typeof StartSchema>;
+export type Start = z.infer<typeof StartSchema>;
 
 const EndSchema = z.object({
   date: z.coerce.date().optional(),
   dateTime: z.coerce.date(),
   timeZone: z.string(),
 });
-export type EndSchema = z.infer<typeof EndSchema>;
+export type End = z.infer<typeof EndSchema>;
 
 const OriginalStartTimeSchema = z.object({
   date: z.date(),
   dateTime: z.string().datetime(),
   timeZone: z.string(),
 });
-export type OriginalStartTimeSchema = z.infer<typeof OriginalStartTimeSchema>;
+export type OriginalStartTime = z.infer<typeof OriginalStartTimeSchema>;
 
 const AttendeeSchema = z.object({
   id: z.string(),
@@ -58,32 +58,30 @@ const AttendeeSchema = z.object({
   comment: z.string(),
   additionalGuests: z.number().int(),
 });
-export type AttendeeSchema = z.infer<typeof AttendeeSchema>;
+export type Attendee = z.infer<typeof AttendeeSchema>;
 
 const ExtendedPropertiesSchema = z.object({
   private: z.record(z.string()),
   shared: z.record(z.string()),
 });
-export type ExtendedPropertiesSchema = z.infer<typeof ExtendedPropertiesSchema>;
+export type ExtendedProperties = z.infer<typeof ExtendedPropertiesSchema>;
 
 const ConferenceSolutionKeySchema = z.object({
   type: z.string(),
 });
-export type ConferenceSolutionKeySchema = z.infer<
-  typeof ConferenceSolutionKeySchema
->;
+export type ConferenceSolutionKey = z.infer<typeof ConferenceSolutionKeySchema>;
 
 const StatusSchema = z.object({
   statusCode: z.string(),
 });
-export type StatusSchema = z.infer<typeof StatusSchema>;
+export type Status = z.infer<typeof StatusSchema>;
 
 const CreateRequestSchema = z.object({
   requestId: z.string(),
   conferenceSolutionKey: ConferenceSolutionKeySchema,
   status: StatusSchema,
 });
-export type CreateRequestSchema = z.infer<typeof CreateRequestSchema>;
+export type CreateRequest = z.infer<typeof CreateRequestSchema>;
 
 const EntryPointSchema = z.object({
   entryPointType: z.string(),
@@ -95,14 +93,14 @@ const EntryPointSchema = z.object({
   passcode: z.string(),
   password: z.string(),
 });
-export type EntryPointSchema = z.infer<typeof EntryPointSchema>;
+export type EntryPoint = z.infer<typeof EntryPointSchema>;
 
 const ConferenceSolutionSchema = z.object({
   key: ConferenceSolutionKeySchema,
   name: z.string(),
   iconUri: z.string(),
 });
-export type ConferenceSolutionSchema = z.infer<typeof ConferenceSolutionSchema>;
+export type ConferenceSolution = z.infer<typeof ConferenceSolutionSchema>;
 
 const ConferenceDataSchema = z.object({
   createRequest: CreateRequestSchema,
@@ -112,7 +110,7 @@ const ConferenceDataSchema = z.object({
   signature: z.string(),
   notes: z.string(),
 });
-export type ConferenceDataSchema = z.infer<typeof ConferenceDataSchema>;
+export type ConferenceData = z.infer<typeof ConferenceDataSchema>;
 
 const GadgetSchema = z.object({
   type: z.string(),
@@ -124,30 +122,30 @@ const GadgetSchema = z.object({
   display: z.string(),
   preferences: z.record(z.string()),
 });
-export type GadgetSchema = z.infer<typeof GadgetSchema>;
+export type Gadget = z.infer<typeof GadgetSchema>;
 
 const OverrideSchema = z.object({
   method: z.string(),
   minutes: z.number().int(),
 });
-export type OverrideSchema = z.infer<typeof OverrideSchema>;
+export type Override = z.infer<typeof OverrideSchema>;
 
 const RemindersSchema = z.object({
   useDefault: z.boolean(),
   overrides: z.array(OverrideSchema),
 });
-export type RemindersSchema = z.infer<typeof RemindersSchema>;
+export type Reminders = z.infer<typeof RemindersSchema>;
 
 const SourceSchema = z.object({
   url: z.string(),
   title: z.string(),
 });
-export type SourceSchema = z.infer<typeof SourceSchema>;
+export type Source = z.infer<typeof SourceSchema>;
 
 const CustomLocationSchema = z.object({
   label: z.string(),
 });
-export type CustomLocationSchema = z.infer<typeof CustomLocationSchema>;
+export type CustomLocation = z.infer<typeof CustomLocationSchema>;
 
 const OfficeLocationSchema = z.object({
   buildingId: z.string(),
@@ -156,7 +154,7 @@ const OfficeLocationSchema = z.object({
   deskId: z.string(),
   label: z.string(),
 });
-export type OfficeLocationSchema = z.infer<typeof OfficeLocationSchema>;
+export type OfficeLocation = z.infer<typeof OfficeLocationSchema>;
 
 const WorkingLocationPropertiesSchema = z.object({
   type: z.string(),
@@ -164,7 +162,7 @@ const WorkingLocationPropertiesSchema = z.object({
   customLocation: CustomLocationSchema,
   officeLocation: OfficeLocationSchema,
 });
-export type WorkingLocationPropertiesSchema = z.infer<
+export type WorkingLocationProperties = z.infer<
   typeof WorkingLocationPropertiesSchema
 >;
 
@@ -172,18 +170,14 @@ const OutOfOfficePropertiesSchema = z.object({
   autoDeclineMode: z.string(),
   declineMessage: z.string(),
 });
-export type OutOfOfficePropertiesSchema = z.infer<
-  typeof OutOfOfficePropertiesSchema
->;
+export type OutOfOfficeProperties = z.infer<typeof OutOfOfficePropertiesSchema>;
 
 const FocusTimePropertiesSchema = z.object({
   autoDeclineMode: z.string(),
   declineMessage: z.string(),
   chatStatus: z.string(),
 });
-export type FocusTimePropertiesSchema = z.infer<
-  typeof FocusTimePropertiesSchema
->;
+export type FocusTimeProperties = z.infer<typeof FocusTimePropertiesSchema>;
 
 const AttachmentSchema = z.object({
   fileUrl: z.string(),
@@ -192,7 +186,7 @@ const AttachmentSchema = z.object({
   iconLink: z.string(),
   fileId: z.string(),
 });
-export type AttachmentSchema = z.infer<typeof AttachmentSchema>;
+export type Attachment = z.infer<typeof AttachmentSchema>;
 
 const EventSchema = z.object({
   kind: z.string(),
@@ -253,4 +247,4 @@ export const EventsResponseSchema = z.object({
   nextSyncToken: z.string().optional(),
   items: z.array(EventSchema),
 });
-export type EventsResponseSchema = z.infer<typeof EventsResponseSchema>;
+export type EventsResponse = z.infer<typeof EventsResponseSchema>;
