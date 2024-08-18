@@ -17,6 +17,7 @@ import path from "path";
 import remarkGfm from "remark-gfm";
 import sanitizeHtml from "sanitize-html";
 import TurndownService from "turndown";
+import { Kbd } from "@radix-ui/themes";
 
 /**
  * The props for the `Md` component.
@@ -110,6 +111,7 @@ export default async function Md({
           },
         }}
         components={{
+          Kbd,
           a: (props) =>
             props.href && (
               <RadixLink asChild size={textSize} color="pink">
