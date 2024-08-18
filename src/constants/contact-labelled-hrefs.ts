@@ -2,6 +2,11 @@ import { ContactLabelledHref } from "@/interfaces/contact-labelled-href";
 
 export const contactLabelledHrefs: ContactLabelledHref[] = [
   {
+    href: "mailto:aiinmedicine@cambridgesu.co.uk",
+    label: "Email",
+    handle: "aiinmedicine@cambridgesu.co.uk",
+  },
+  {
     href: "https://www.instagram.com/aiinmedicinesoc/",
     label: "Instagram",
     handle: "@aiinmedicinesoc",
