@@ -7,6 +7,10 @@ export const committeeMembers: CommitteeMember[] = [
     headline: "Clinical School, 4th Year",
   },
   {
+    name: "Justine Chan",
+    role: "Secretary",
+  },
+  {
     name: "Sharon Ho",
     role: "Treasurer",
   },
