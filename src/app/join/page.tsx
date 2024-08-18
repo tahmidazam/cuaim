@@ -15,7 +15,7 @@ export default async function JoinPage() {
       />
 
       <Section>
-        <Container size="1" className="px-2">
+        <Container size="1" className="px-4">
           <Flex className="flex-col gap-8">
             <JoinMailingListForm />
 
