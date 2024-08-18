@@ -3,7 +3,7 @@
 import { tabs } from "@/constants/tabs";
 import { LabelledHref } from "@/interfaces/labelled-href";
 import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
-import { Button, Flex, Heading } from "@radix-ui/themes";
+import { Flex, Heading, IconButton } from "@radix-ui/themes";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -32,9 +32,9 @@ export default function MobileTabs() {
 
   return (
     <>
-      <Button variant="ghost" onClick={togglePresentation}>
+      <IconButton variant="ghost" onClick={togglePresentation}>
         <HamburgerMenuIcon />
-      </Button>
+      </IconButton>
 
       <AnimatePresence>
         {isPresented && (
@@ -47,17 +47,17 @@ export default function MobileTabs() {
             />
 
             <motion.div
-              initial={{ y: "-100%" }}
-              animate={{ y: 0 }}
-              exit={{ y: "-100%" }}
+              initial={{ transform: "translateY(-100%)" }}
+              animate={{ transform: "translateY(0%)" }}
+              exit={{ transform: "translateY(-100%)" }}
               transition={{ duration: 0.3 }}
               className="fixed top-0 left-0 w-screen h-screen z-30 bg-[var(--color-background)]"
             >
               <Flex className="flex-col items-start w-full relative">
                 <Flex className="absolute top-0 right-0 pt-4 pr-4 sm:hidden">
-                  <Button variant="ghost" onClick={togglePresentation}>
+                  <IconButton variant="ghost" onClick={togglePresentation}>
                     <Cross1Icon />
-                  </Button>
+                  </IconButton>
                 </Flex>
 
                 <Flex className="flex-col items-start gap-4 p-16 flex-grow">
