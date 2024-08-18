@@ -34,9 +34,11 @@ export default async function EventsPage() {
     <>
       <PageHeader title="Events" subtitle="Explore our upcoming events.">
         <Flex className="gap-2 justify-center flex-wrap">
-          {process.env.GOOGLE_CALENDAR_PUBLIC_ICAL_ADDRESS && (
+          {process.env.GOOGLE_CALENDAR_ID && (
             <Button asChild>
-              <Link href={process.env.GOOGLE_CALENDAR_PUBLIC_ICAL_ADDRESS}>
+              <Link
+                href={`https://calendar.google.com/calendar/ical/${process.env.GOOGLE_CALENDAR_ID}/public/basic.ics`}
+              >
                 <UpdateIcon /> Sync Calendar
               </Link>
             </Button>
