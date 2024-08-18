@@ -1,4 +1,4 @@
-import { Dialog, Text, Flex, Button } from "@radix-ui/themes";
+import { Button, Dialog, Flex, Text } from "@radix-ui/themes";
 import Md from "./md";
 
 /**
