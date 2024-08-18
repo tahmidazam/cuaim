@@ -2,6 +2,7 @@
 
 import { tabs } from "@/constants/tabs";
 import { LabelledHref } from "@/interfaces/labelled-href";
+import isTabActive from "@/utils/isTabActive";
 import { Box, Flex, TabNav } from "@radix-ui/themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -32,9 +33,7 @@ export default function Header() {
           {tabs.map(({ href, label }: LabelledHref) => (
             <TabNav.Link
               key={href}
-              active={
-                href === "/" ? pathname === href : pathname.startsWith(href)
-              }
+              active={isTabActive(href, pathname)}
               className="hidden sm:flex"
               asChild
             >
