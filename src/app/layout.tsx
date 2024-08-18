@@ -43,8 +43,8 @@ export default function RootLayout({
             <Theme accentColor="pink">
               <AnalyticsPageView />
 
-              <Flex className="flex-col">
-                <Flex className="flex-col min-w-full min-h-screen">
+              <Flex className="flex-col w-screen">
+                <Flex className="flex-col min-h-screen">
                   <UnderConstructionBanner />
 
                   <Header />

@@ -33,7 +33,7 @@ export default async function EventsPage() {
   return (
     <>
       <PageHeader title="Events" subtitle="Explore our upcoming events.">
-        <Flex className="gap-2 justify-center">
+        <Flex className="gap-2 justify-center flex-wrap">
           {process.env.GOOGLE_CALENDAR_PUBLIC_ICAL_ADDRESS && (
             <Button asChild>
               <Link href={process.env.GOOGLE_CALENDAR_PUBLIC_ICAL_ADDRESS}>

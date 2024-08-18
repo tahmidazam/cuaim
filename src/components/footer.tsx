@@ -1,7 +1,13 @@
 import { contactLabelledHrefs } from "@/constants/contact-labelled-hrefs";
 import { tabs } from "@/constants/tabs";
 import { LabelledHref } from "@/interfaces/labelled-href";
-import { Container, Flex, Link as RadixLink, Text } from "@radix-ui/themes";
+import {
+  Container,
+  Flex,
+  Link as RadixLink,
+  Section,
+  Text,
+} from "@radix-ui/themes";
 import Link from "next/link";
 import Md from "./md";
 
@@ -10,7 +16,7 @@ import Md from "./md";
  */
 export default function Footer() {
   return (
-    <Flex className=" bg-[var(--gray-2)]">
+    <Section className="bg-[var(--gray-2)]" py="0">
       <Container>
         <Flex className="flex-col p-4 gap-8">
           <Flex className="gap-24 flex-wrap">
@@ -44,6 +50,6 @@ export default function Footer() {
           <Md filename="credits" textColour="gray" textSize="1" />
         </Flex>
       </Container>
-    </Flex>
+    </Section>
   );
 }
