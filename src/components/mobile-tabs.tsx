@@ -6,7 +6,7 @@ import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { Button, Flex, Heading } from "@radix-ui/themes";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BlurEntry from "./blur-entry";
 
 /**
@@ -15,7 +15,20 @@ import BlurEntry from "./blur-entry";
 export default function MobileTabs() {
   const [isPresented, setIsPresented] = useState(false);
 
-  const togglePresentation = () => setIsPresented(!isPresented);
+  const togglePresentation = () => {
+    // Update the presentation state.
+    setIsPresented(!isPresented);
+
+    // Disable scrolling on the body when the menu is presented.
+    document.body.style.overflow = isPresented ? "auto" : "hidden";
+  };
+
+  // On unmount, reset the body overflow to auto.
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
 
   return (
     <>
