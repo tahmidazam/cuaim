@@ -25,27 +25,27 @@ export default function Header() {
         <TabNav.Root className="bg-[var(--color-background)]" justify="center">
           <TabNav.Link
             asChild
-            className="flex sm:absolute sm:left-0 font-bold text-[var(--accent-11)]"
+            className="flex md:absolute md:left-0 font-bold text-[var(--accent-11)]"
           >
-            <Link href="/">CU AIM</Link>
+            <Link href="/">CU AI in Medicine Society</Link>
           </TabNav.Link>
 
           {tabs.map(({ href, label }: LabelledHref) => (
             <TabNav.Link
               key={href}
               active={isTabActive(href, pathname)}
-              className="hidden sm:flex"
+              className="hidden md:flex"
               asChild
             >
               <Link href={href}>{label}</Link>
             </TabNav.Link>
           ))}
 
-          <Flex className="absolute right-0 items-center h-full pr-2 hidden sm:flex">
+          <Flex className="absolute right-0 items-center h-full pr-2 hidden md:flex">
             <ThemeSegmentedControl size="1" radius="full" />
           </Flex>
 
-          <Flex className="absolute right-0 items-center h-full pr-4 sm:hidden">
+          <Flex className="absolute right-0 items-center h-full pr-4 md:hidden">
             <MobileTabs />
           </Flex>
         </TabNav.Root>
