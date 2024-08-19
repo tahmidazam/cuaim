@@ -1,4 +1,4 @@
-import { socialIconMap } from "@/constants/social-icon-map";
+import { SOCIAL_ICON_MAP } from "@/constants/social-icon-map";
 import { LabelledHref } from "@/interfaces/labelled-href";
 import { IconButton, Link as RadixLink } from "@radix-ui/themes";
 import Link from "next/link";
@@ -13,7 +13,7 @@ import Link from "next/link";
  */
 export default function ContactLink({ href, label }: LabelledHref) {
   const key = label.toLowerCase();
-  const Icon = socialIconMap[key as keyof typeof socialIconMap];
+  const Icon = SOCIAL_ICON_MAP[key as keyof typeof SOCIAL_ICON_MAP];
 
   if (!Icon)
     return (

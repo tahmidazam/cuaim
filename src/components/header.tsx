@@ -1,6 +1,6 @@
 "use client";
 
-import { tabs } from "@/constants/tabs";
+import { TABS } from "@/constants/tabs";
 import { LabelledHref } from "@/interfaces/labelled-href";
 import isTabActive from "@/utils/isTabActive";
 import { Box, Flex, TabNav } from "@radix-ui/themes";
@@ -30,7 +30,7 @@ export default function Header() {
             <Link href="/">CU AI in Medicine Society</Link>
           </TabNav.Link>
 
-          {tabs.map(({ href, label }: LabelledHref) => (
+          {TABS.map(({ href, label }: LabelledHref) => (
             <TabNav.Link
               key={href}
               active={isTabActive(href, pathname)}

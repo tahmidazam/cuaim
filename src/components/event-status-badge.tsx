@@ -1,7 +1,7 @@
 import {
-  eventStatusColorMap,
-  eventStatusIconMap,
-  eventStatusLabelMap,
+  EVENT_STATUS_COLOR_MAP,
+  EVENT_STATUS_ICON_MAP,
+  EVENT_STATUS_LABEL_MAP,
 } from "@/constants/status-maps";
 import { Badge } from "@radix-ui/themes";
 
@@ -10,9 +10,12 @@ import { Badge } from "@radix-ui/themes";
  * @param param0 The status of the event.
  */
 export default function EventStatusBadge({ status }: { status: string }) {
-  const Icon = eventStatusIconMap[status as keyof typeof eventStatusIconMap];
-  const color = eventStatusColorMap[status as keyof typeof eventStatusColorMap];
-  const label = eventStatusLabelMap[status as keyof typeof eventStatusLabelMap];
+  const Icon =
+    EVENT_STATUS_ICON_MAP[status as keyof typeof EVENT_STATUS_ICON_MAP];
+  const color =
+    EVENT_STATUS_COLOR_MAP[status as keyof typeof EVENT_STATUS_COLOR_MAP];
+  const label =
+    EVENT_STATUS_LABEL_MAP[status as keyof typeof EVENT_STATUS_LABEL_MAP];
 
   if (!Icon || !color || !label) return null;
 
