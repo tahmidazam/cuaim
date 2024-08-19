@@ -1,5 +1,5 @@
-import { contactLabelledHrefs } from "@/constants/contact-labelled-hrefs";
-import { tabs } from "@/constants/tabs";
+import { CONTACT_LABELLED_HREFS } from "@/constants/contact-labelled-hrefs";
+import { TABS } from "@/constants/tabs";
 import { LabelledHref } from "@/interfaces/labelled-href";
 import { Container, Flex, Link as RadixLink, Section } from "@radix-ui/themes";
 import Link from "next/link";
@@ -22,7 +22,7 @@ export default function Footer() {
 
           <Flex className="gap-8 flex-wrap">
             <FooterSection title="Sitemap">
-              {tabs.map(({ href, label }: LabelledHref, index: number) => (
+              {TABS.map(({ href, label }: LabelledHref, index: number) => (
                 <RadixLink key={index} asChild size="2">
                   <Link href={href}>{label}</Link>
                 </RadixLink>
@@ -30,7 +30,7 @@ export default function Footer() {
             </FooterSection>
 
             <FooterSection title="Contact">
-              {contactLabelledHrefs.map(
+              {CONTACT_LABELLED_HREFS.map(
                 ({ href, label }: LabelledHref, index: number) => (
                   <RadixLink key={index} asChild size="2">
                     <Link href={href}>{label}</Link>

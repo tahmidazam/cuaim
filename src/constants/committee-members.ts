@@ -1,65 +1,95 @@
 import { CommitteeMember } from "@/interfaces/committee-member";
 
-export const committeeMembers: CommitteeMember[] = [
-  {
-    name: "Neil Sardesai",
-    role: "President",
-    headline: "Clinical School, 4th Year",
-  },
-  {
-    name: "Justine Chan",
-    role: "Secretary",
-  },
-  {
-    name: "Sharon Ho",
-    role: "Treasurer",
-  },
-  {
-    name: "Zoya Yasmine",
-    role: "Graphics",
-  },
-  {
-    name: "Arzina Ismaili",
-    role: "Engineering Representative",
-  },
-  {
-    name: "Harshvir Grewal",
-    role: "Events Officer",
-  },
-  {
-    name: "Keshav Kedia",
-    role: "Events Officer",
-    headline: "MedST IB",
-    bio: '> *"I\'m a second year medic at Caius fascinated to explore how AI will interface with doctors in future healthcare delivery. I will be helping to organise events and socials for the society throughout the coming year!"*',
-    contact: [
-      {
-        href: "mailto:kk814@cam.ac.uk",
-        label: "Email",
-      },
-    ],
-  },
-  {
-    name: "Tahmid Azam",
-    role: "Webmaster",
-    headline: "MedST IB",
-    bio: '> *"I\'m a second year medic at Emmanuel passionate about applications of ML to clinical practice, particularly in the disabled community."*',
-    contact: [
-      {
-        href: "mailto:ta549@cam.ac.uk",
-        label: "Email",
-      },
-      {
-        href: "https://www.github.com/tahmidazam",
-        label: "GitHub",
-      },
-      {
-        href: "https://www.linkedin.com/in/tahmid-azam/",
-        label: "LinkedIn",
-      },
-      {
-        href: "https://www.instagram.com/tahmid.az/",
-        label: "Instagram",
-      },
-    ],
-  },
+export const NEIL_SARDESAI: CommitteeMember = {
+  name: "Neil Sardesai",
+  role: "President",
+  headline: "Clinical School, 4th Year; BA in Engineering",
+};
+
+export const JUSTINE_CHAN: CommitteeMember = {
+  name: "Justine Chan",
+  role: "Secretary",
+};
+
+export const SHARON_HO: CommitteeMember = {
+  name: "Sharon Ho",
+  role: "Treasurer",
+};
+
+export const ZOYA_YASMINE: CommitteeMember = {
+  name: "Zoya Yasmine",
+  role: "Graphics",
+  headline:
+    "1st Year DPhil at the University of Oxford; previously LLB (LSE), MPhil (Cantab)",
+  bio: "Zoya is a first year PhD student in the Faculty of Law at the University of Oxford. Her research explores how intellectual property laws influence biases in medical AI. Zoya has worked for numerous health and medtech organisations and start-ups including BenevolentAI, MeditSimple, and the General Medical Council. She completed her MPhil at Cambridge in the Ethics of AI, Data and Algorithms and served as Secretary for the AI in Medicine Society in 2023/24. Zoya is excited to continue to be part of the committee again and bring insights about the ethics and laws surrounding the use of AI in healthcare.",
+  contact: [
+    {
+      href: "mailto:zy366@cam.ac.uk",
+      label: "Email",
+      handle: "zy366@cam.ac.uk",
+    },
+    {
+      href: "https://www.linkedin.com/in/zoya-yousef-6989b6209/",
+      label: "LinkedIn",
+    },
+  ],
+};
+
+export const ARZINA_ISMAILI: CommitteeMember = {
+  name: "Arzina Ismaili",
+  role: "Engineering Representative",
+};
+
+export const HARSHVIR_GREWAL: CommitteeMember = {
+  name: "Harshvir Grewal",
+  role: "Events Officer",
+};
+
+export const KESHAV_KEDIA: CommitteeMember = {
+  name: "Keshav Kedia",
+  role: "Events Officer",
+  headline: "MedST IB",
+  bio: '> *"I\'m a second year medic at Caius fascinated to explore how AI will interface with doctors in future healthcare delivery. I will be helping to organise events and socials for the society throughout the coming year!"*',
+  contact: [
+    {
+      href: "mailto:kk814@cam.ac.uk",
+      label: "Email",
+    },
+  ],
+};
+
+export const TAHMID_AZAM: CommitteeMember = {
+  name: "Tahmid Azam",
+  role: "Webmaster",
+  headline: "MedST IB",
+  bio: '> *"I\'m a second year medic at Emmanuel passionate about applications of ML to clinical practice, particularly in the disabled community."*',
+  contact: [
+    {
+      href: "mailto:ta549@cam.ac.uk",
+      label: "Email",
+    },
+    {
+      href: "https://www.github.com/tahmidazam",
+      label: "GitHub",
+    },
+    {
+      href: "https://www.linkedin.com/in/tahmid-azam/",
+      label: "LinkedIn",
+    },
+    {
+      href: "https://www.instagram.com/tahmid.az/",
+      label: "Instagram",
+    },
+  ],
+};
+
+export const COMMITTEE_MEMBERS: CommitteeMember[] = [
+  NEIL_SARDESAI,
+  JUSTINE_CHAN,
+  SHARON_HO,
+  ZOYA_YASMINE,
+  ARZINA_ISMAILI,
+  HARSHVIR_GREWAL,
+  KESHAV_KEDIA,
+  TAHMID_AZAM,
 ];

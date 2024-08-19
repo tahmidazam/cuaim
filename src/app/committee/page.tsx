@@ -1,6 +1,6 @@
 import CommitteeMemberCell from "@/components/committee-member-cell";
 import PageHeader from "@/components/page-header";
-import { committeeMembers } from "@/constants/committee-members";
+import { COMMITTEE_MEMBERS } from "@/constants/committee-members";
 import { CommitteeMember } from "@/interfaces/committee-member";
 import { Container, Grid, Section } from "@radix-ui/themes";
 
@@ -18,11 +18,10 @@ export default function CommitteePage() {
             columns={{
               initial: "1",
               sm: "2",
-              md: "4",
             }}
             className="gap-4 auto-rows-fr"
           >
-            {committeeMembers.map(
+            {COMMITTEE_MEMBERS.map(
               (committeeMember: CommitteeMember, index: number) => (
                 <CommitteeMemberCell key={index} {...committeeMember} />
               )

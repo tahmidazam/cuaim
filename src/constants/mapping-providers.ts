@@ -1,6 +1,6 @@
 import { LabelledHref } from "@/interfaces/labelled-href";
 
-export const mappingProviders: LabelledHref[] = [
+export const MAPPING_PROVIDERS: LabelledHref[] = [
   {
     href: "https://beta.maps.apple.com/?q=",
     label: "Open in Apple Maps",

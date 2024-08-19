@@ -1,6 +1,6 @@
 "use client";
 
-import { tabs } from "@/constants/tabs";
+import { TABS } from "@/constants/tabs";
 import { LabelledHref } from "@/interfaces/labelled-href";
 import isTabActive from "@/utils/isTabActive";
 import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
@@ -65,7 +65,7 @@ export default function MobileTabs() {
                 </Flex>
 
                 <Flex className="flex-col items-start gap-4 p-4 h-full justify-center flex-grow">
-                  {tabs.map(({ href, label }: LabelledHref, index: number) => (
+                  {TABS.map(({ href, label }: LabelledHref, index: number) => (
                     <BlurEntry
                       delayIndex={index}
                       key={index}

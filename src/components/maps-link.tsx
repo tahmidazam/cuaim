@@ -1,4 +1,4 @@
-import { mappingProviders } from "@/constants/mapping-providers";
+import { MAPPING_PROVIDERS } from "@/constants/mapping-providers";
 import { LabelledHref } from "@/interfaces/labelled-href";
 import { DropdownMenu, Link as RadixLink } from "@radix-ui/themes";
 import Link from "next/link";
@@ -22,7 +22,7 @@ export default function MapsLink({ location }: { location?: string }) {
       </DropdownMenu.Trigger>
 
       <DropdownMenu.Content>
-        {mappingProviders.map(
+        {MAPPING_PROVIDERS.map(
           ({ label, href: baseUrl }: LabelledHref, index: number) => (
             <DropdownMenu.Item asChild key={index}>
               <Link href={`${baseUrl}${encodedLocation}`}>{label}</Link>

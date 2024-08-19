@@ -1,6 +1,6 @@
 import ContactTableRow from "@/components/contact-table-row";
 import PageHeader from "@/components/page-header";
-import { contactLabelledHrefs } from "@/constants/contact-labelled-hrefs";
+import { CONTACT_LABELLED_HREFS } from "@/constants/contact-labelled-hrefs";
 import { ContactLabelledHref } from "@/interfaces/contact-labelled-href";
 import { Container, Section, Table } from "@radix-ui/themes";
 
@@ -13,7 +13,7 @@ export default function ContactPage() {
         <Container size="1" className="px-2">
           <Table.Root>
             <Table.Body>
-              {contactLabelledHrefs.map(
+              {CONTACT_LABELLED_HREFS.map(
                 (contactLabelledHref: ContactLabelledHref, index: number) => (
                   <ContactTableRow {...contactLabelledHref} key={index} />
                 )

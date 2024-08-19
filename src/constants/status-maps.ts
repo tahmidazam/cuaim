@@ -1,12 +1,12 @@
 import { CheckIcon, Cross1Icon, QuestionMarkIcon } from "@radix-ui/react-icons";
 
-export const eventStatusIconMap = {
+export const EVENT_STATUS_ICON_MAP = {
   confirmed: CheckIcon,
   tentative: QuestionMarkIcon,
   cancelled: Cross1Icon,
 };
 
-export const eventStatusColorMap: {
+export const EVENT_STATUS_COLOR_MAP: {
   [key: string]: "green" | "yellow" | "red";
 } = {
   confirmed: "green",
@@ -14,7 +14,7 @@ export const eventStatusColorMap: {
   cancelled: "red",
 };
 
-export const eventStatusLabelMap: {
+export const EVENT_STATUS_LABEL_MAP: {
   [key: string]: string;
 } = {
   confirmed: "Confirmed",

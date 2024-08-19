@@ -6,7 +6,7 @@ import {
   TwitterLogoIcon,
 } from "@radix-ui/react-icons";
 
-export const socialIconMap = {
+export const SOCIAL_ICON_MAP = {
   email: EnvelopeClosedIcon,
   linkedin: LinkedInLogoIcon,
   instagram: InstagramLogoIcon,

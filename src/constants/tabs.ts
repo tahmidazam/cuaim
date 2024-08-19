@@ -1,6 +1,6 @@
 import { LabelledHref } from "@/interfaces/labelled-href";
 
-export const tabs: LabelledHref[] = [
+export const TABS: LabelledHref[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Events", href: "/events" },
