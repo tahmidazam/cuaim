@@ -17,7 +17,7 @@ export default function FooterSection({ title, children }: FooterSectionProps) {
     <Flex className="flex-col gap-2 flex-grow">
       <Text>{title}</Text>
 
-      {children && <Flex className="flex-col">{children}</Flex>}
+      {children && <Flex className="flex-col items-start">{children}</Flex>}
     </Flex>
   );
 }
