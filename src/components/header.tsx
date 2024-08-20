@@ -6,6 +6,7 @@ import isTabActive from "@/utils/isTabActive";
 import { Box, Flex, TabNav } from "@radix-ui/themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import LogoMark from "./logo-mark";
 import MobileTabs from "./mobile-tabs";
 import ThemeSegmentedControl from "./theme-segmented-control";
 
@@ -27,7 +28,13 @@ export default function Header() {
             asChild
             className="flex md:absolute md:left-0 font-bold text-[var(--accent-11)]"
           >
-            <Link href="/">CU AI in Medicine Society</Link>
+            <Link href="/">
+              <LogoMark
+                style={{
+                  color: "var(--teal-11)",
+                }}
+              />
+            </Link>
           </TabNav.Link>
 
           {TABS.map(({ href, label }: LabelledHref) => (
