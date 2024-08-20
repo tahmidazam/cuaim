@@ -5,8 +5,16 @@
   margin-top: 0;
 }
 
+.md blockquote > :first-child {
+  margin-top: 0;
+}
+
 /* Remove the `margin-bottom` from the last rendered markdown component. */
 .md > :last-child {
+  margin-bottom: 0;
+}
+
+.md blockquote > :last-child {
   margin-bottom: 0;
 }
 
