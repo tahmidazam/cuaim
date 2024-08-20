@@ -17,7 +17,7 @@ export interface HeroProps {
 export default function Hero({ primary, secondary, children }: HeroProps) {
   return (
     <Section className="py-0">
-      <Container size="3" className="px-4">
+      <Container size="4" className="px-4">
         <Flex
           className="flex-col gap-8 sm:gap-16 items-center justify-center"
           style={{
