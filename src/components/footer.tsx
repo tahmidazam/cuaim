@@ -1,5 +1,7 @@
+import { COMMITTEE_MEMBERS } from "@/constants/committee-members";
 import { CONTACT_LABELLED_HREFS } from "@/constants/contact-labelled-hrefs";
 import { TABS } from "@/constants/tabs";
+import { CommitteeMember } from "@/interfaces/committee-member";
 import { LabelledHref } from "@/interfaces/labelled-href";
 import { Container, Flex, Link as RadixLink, Section } from "@radix-ui/themes";
 import Link from "next/link";
@@ -20,7 +22,7 @@ export default function Footer() {
             <ThemeSegmentedControl size="1" radius="full" />
           </Flex>
 
-          <Flex className="gap-8 flex-wrap">
+          <Flex className="gap-16 flex-wrap">
             <FooterSection title="Sitemap">
               {TABS.map(({ href, label }: LabelledHref, index: number) => (
                 <RadixLink key={index} asChild size="2">
@@ -34,6 +36,16 @@ export default function Footer() {
                 ({ href, label }: LabelledHref, index: number) => (
                   <RadixLink key={index} asChild size="2">
                     <Link href={href}>{label}</Link>
+                  </RadixLink>
+                )
+              )}
+            </FooterSection>
+
+            <FooterSection title="Committee">
+              {COMMITTEE_MEMBERS.map(
+                ({ name }: CommitteeMember, index: number) => (
+                  <RadixLink key={index} asChild size="2">
+                    <Link href="/committee">{name}</Link>
                   </RadixLink>
                 )
               )}
