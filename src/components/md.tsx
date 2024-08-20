@@ -6,6 +6,7 @@ import {
   Blockquote,
   Code,
   Heading,
+  Kbd,
   Link as RadixLink,
   Text,
 } from "@radix-ui/themes";
@@ -17,7 +18,6 @@ import path from "path";
 import remarkGfm from "remark-gfm";
 import sanitizeHtml from "sanitize-html";
 import TurndownService from "turndown";
-import { Kbd } from "@radix-ui/themes";
 
 /**
  * The props for the `Md` component.
@@ -38,7 +38,7 @@ export interface MdProps {
     | "red"
     | "ruby"
     | "crimson"
-    | "pink"
+    | "teal"
     | "plum"
     | "purple"
     | "violet"
@@ -114,7 +114,7 @@ export default async function Md({
           Kbd,
           a: (props) =>
             props.href && (
-              <RadixLink asChild size={textSize} color="pink">
+              <RadixLink asChild size={textSize} color="teal">
                 <Link href={props.href}>{props.children}</Link>
               </RadixLink>
             ),

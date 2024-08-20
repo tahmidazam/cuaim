@@ -77,7 +77,7 @@ export default function MobileTabs() {
                           size="7"
                           weight="bold"
                           color={
-                            isTabActive(href, pathname) ? "pink" : undefined
+                            isTabActive(href, pathname) ? "teal" : undefined
                           }
                         >
                           {label}

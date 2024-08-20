@@ -7,7 +7,7 @@ import Md from "./md";
 export default function UnderConstructionBanner() {
   return (
     <>
-      <Flex className="bg-[var(--pink-2)] p-2 justify-center">
+      <Flex className="bg-[var(--teal-2)] p-2 justify-center">
         <Md filename="feedback" textSize="1" />
       </Flex>
 

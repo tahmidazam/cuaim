@@ -13,10 +13,17 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import dynamic from "next/dynamic";
+import { Inter } from "next/font/google";
 import { Toaster } from "sonner";
 import { AnalyticsProvider } from "../analytics/analytics-provider";
 import "./../css/colours.css";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 const AnalyticsPageView = dynamic(
   () => import("../analytics/analytics-page-view"),
@@ -37,12 +44,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.variable}>
       <AnalyticsProvider>
         <body>
           <ThemeProvider attribute="class">
-            <Theme accentColor="pink">
+            <Theme accentColor="teal">
               <AnalyticsPageView />
+
               <SpeedInsights />
 
               <Flex className="flex-col w-screen">
