@@ -17,43 +17,45 @@ export default function Footer() {
   return (
     <Section className="bg-[var(--gray-2)]" py="0">
       <Container>
-        <Flex className="flex-col p-4 gap-8 items-start">
-          <Flex className="justify-end w-full md:hidden">
-            <ThemeSegmentedControl size="1" radius="full" />
-          </Flex>
+        <Flex className="flex-col gap-16  p-4">
+          <Flex className="flex-colgap-8 items-start">
+            <Flex className="justify-end w-full md:hidden">
+              <ThemeSegmentedControl size="1" radius="full" />
+            </Flex>
 
-          <Flex className="gap-16 flex-wrap">
-            <FooterSection title="Sitemap">
-              {TABS.map(({ href, label }: LabelledHref, index: number) => (
-                <RadixLink key={index} asChild size="2">
-                  <Link href={href}>{label}</Link>
-                </RadixLink>
-              ))}
-            </FooterSection>
-
-            <FooterSection title="Contact">
-              {CONTACT_LABELLED_HREFS.map(
-                ({ href, label }: LabelledHref, index: number) => (
+            <Flex className="gap-16 flex-wrap">
+              <FooterSection title="Sitemap">
+                {TABS.map(({ href, label }: LabelledHref, index: number) => (
                   <RadixLink key={index} asChild size="2">
                     <Link href={href}>{label}</Link>
                   </RadixLink>
-                )
-              )}
-            </FooterSection>
+                ))}
+              </FooterSection>
 
-            <FooterSection title="Committee">
-              {COMMITTEE_MEMBERS.map(
-                ({ name }: CommitteeMember, index: number) => (
-                  <RadixLink key={index} asChild size="2">
-                    <Link href="/committee">{name}</Link>
-                  </RadixLink>
-                )
-              )}
-            </FooterSection>
+              <FooterSection title="Contact">
+                {CONTACT_LABELLED_HREFS.map(
+                  ({ href, label }: LabelledHref, index: number) => (
+                    <RadixLink key={index} asChild size="2">
+                      <Link href={href}>{label}</Link>
+                    </RadixLink>
+                  )
+                )}
+              </FooterSection>
 
-            <FooterSection title="Docs">
-              <AnalyticsInfoDialog />
-            </FooterSection>
+              <FooterSection title="Committee">
+                {COMMITTEE_MEMBERS.map(
+                  ({ name }: CommitteeMember, index: number) => (
+                    <RadixLink key={index} asChild size="2">
+                      <Link href="/committee">{name}</Link>
+                    </RadixLink>
+                  )
+                )}
+              </FooterSection>
+
+              <FooterSection title="Docs">
+                <AnalyticsInfoDialog />
+              </FooterSection>
+            </Flex>
           </Flex>
 
           <Md filename="credits" textColour="gray" textSize="1" />
