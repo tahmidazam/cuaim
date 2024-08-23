@@ -7,6 +7,11 @@ export const CONTACT_LABELLED_HREFS: ContactLabelledHref[] = [
     handle: "aiinmedicine@cambridgesu.co.uk",
   },
   {
+    label: "WhatsApp Community",
+    href: "https://chat.whatsapp.com/ChhtwLPND8FGKgbO1Zxg0D",
+    handle: "AI in Medicine Community",
+  },
+  {
     href: "https://www.instagram.com/aiinmedicinesoc/",
     label: "Instagram",
     handle: "@aiinmedicinesoc",
