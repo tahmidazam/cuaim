@@ -1,4 +1,4 @@
-The code repository for the official website of Cambridge University's Artificial Intelligence in Medicine Society.
+The code repository for the official website of Cambridge University's Artificial Intelligence in Medicine Society, found at [www.cuaim.co.uk](https://www.cuaim.co.uk).
 
 ## Frameworks and key libraries
 
