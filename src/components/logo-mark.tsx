@@ -8,7 +8,7 @@ export default function LogoMark(props: SVGProps<SVGSVGElement>) {
       preserveAspectRatio="xMidYMid meet"
       version="1.0"
       viewBox="68.2 87.57 690.66 153.67"
-      height="24px"
+      height="20px"
     >
       <defs>
         <g></g>
