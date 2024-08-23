@@ -27,7 +27,8 @@ export default function CommitteePage() {
           <Grid
             columns={{
               initial: "1",
-              md: "2",
+              sm: "2",
+              md: "3",
             }}
           >
             <CommitteeMemberCell {...NEIL_SARDESAI} />
