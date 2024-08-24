@@ -26,13 +26,14 @@ export default function CommitteeMemberCell({
 }: CommitteeMemberCellProps) {
   return (
     <Flex className="flex-col gap-4 hover:bg-[var(--gray-2)] w-full h-full p-4">
-      <Flex className="gap-4">
+      <Flex className="gap-4 shrink-0">
         {pfp ? (
           <Image
             src={pfp}
             alt={name}
-            className="w-40 h-40 object-cover"
             placeholder="blur"
+            objectFit="cover"
+            className="h-40 max-w-40 object-cover"
           />
         ) : (
           <Box className="bg-[var(--gray-3)] w-full max-w-40 h-40 flex-shrink-0"></Box>

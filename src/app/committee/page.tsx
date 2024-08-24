@@ -11,7 +11,9 @@ import {
   ZOYA_YASMINE,
 } from "@/constants/committee-members";
 import { Container, Grid, Section } from "@radix-ui/themes";
+import HARSHVIR_GREWAL_PFP from "../../../public/images/committee/harshvirgrewal.jpeg";
 import KESHAV_KEDIA_PFP from "../../../public/images/committee/keshavkedia.jpeg";
+import TAHMID_AZAM_PFP from "../../../public/images/committee/tahmidazam.jpeg";
 import ZOYA_YASMINE_PFP from "../../../public/images/committee/zoyayasmine.jpeg";
 
 /**
@@ -36,9 +38,12 @@ export default function CommitteePage() {
             <CommitteeMemberCell {...SHARON_HO} />
             <CommitteeMemberCell {...ZOYA_YASMINE} pfp={ZOYA_YASMINE_PFP} />
             <CommitteeMemberCell {...ARZINA_ISMAILI} />
-            <CommitteeMemberCell {...HARSHVIR_GREWAL} />
+            <CommitteeMemberCell
+              {...HARSHVIR_GREWAL}
+              pfp={HARSHVIR_GREWAL_PFP}
+            />
             <CommitteeMemberCell {...KESHAV_KEDIA} pfp={KESHAV_KEDIA_PFP} />
-            <CommitteeMemberCell {...TAHMID_AZAM} />
+            <CommitteeMemberCell {...TAHMID_AZAM} pfp={TAHMID_AZAM_PFP} />
           </Grid>
         </Container>
       </Section>

@@ -1,6 +1,7 @@
 import {
   EnvelopeClosedIcon,
   GitHubLogoIcon,
+  GlobeIcon,
   InstagramLogoIcon,
   LinkedInLogoIcon,
   TwitterLogoIcon,
@@ -13,4 +14,5 @@ export const SOCIAL_ICON_MAP = {
   x: TwitterLogoIcon,
   twitter: TwitterLogoIcon,
   github: GitHubLogoIcon,
+  website: GlobeIcon,
 };

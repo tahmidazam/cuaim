@@ -1,6 +1,6 @@
 import { SOCIAL_ICON_MAP } from "@/constants/social-icon-map";
 import { LabelledHref } from "@/interfaces/labelled-href";
-import { IconButton, Link as RadixLink } from "@radix-ui/themes";
+import { IconButton, Link as RadixLink, Tooltip } from "@radix-ui/themes";
 import Link from "next/link";
 
 /**
@@ -23,10 +23,12 @@ export default function ContactLink({ href, label }: LabelledHref) {
     );
 
   return (
-    <IconButton asChild variant="soft" size="1">
-      <Link href={href}>
-        <Icon />
-      </Link>
-    </IconButton>
+    <Tooltip content={label} side="bottom">
+      <IconButton asChild variant="soft" size="1">
+        <Link href={href}>
+          <Icon />
+        </Link>
+      </IconButton>
+    </Tooltip>
   );
 }

@@ -43,6 +43,14 @@ export const ARZINA_ISMAILI: CommitteeMember = {
 export const HARSHVIR_GREWAL: CommitteeMember = {
   name: "Harshvir Grewal",
   role: "Events Officer",
+  headline: "Clinical School, 5th Year",
+  bio: '> *"I\'m a medic at Trinity Hall, with a passion for the role of AI in Medicine!"*',
+  contact: [
+    {
+      href: "mailto:hsg31@cam.ac.uk",
+      label: "Email",
+    },
+  ],
 };
 
 export const KESHAV_KEDIA: CommitteeMember = {
@@ -60,10 +68,14 @@ export const KESHAV_KEDIA: CommitteeMember = {
 
 export const TAHMID_AZAM: CommitteeMember = {
   name: "Tahmid Azam",
-  role: "Webmaster",
+  role: "Web Developer",
   headline: "MedST IB",
   bio: '> *"I\'m a second year medic at Emmanuel passionate about applications of ML to clinical practice, particularly in the disabled community."*',
   contact: [
+    {
+      href: "https://tahmidazam.github.io",
+      label: "Website",
+    },
     {
       href: "mailto:ta549@cam.ac.uk",
       label: "Email",
