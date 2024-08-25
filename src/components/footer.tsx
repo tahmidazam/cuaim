@@ -18,7 +18,7 @@ export default function Footer() {
     <Section className="bg-[var(--gray-2)]" py="0">
       <Container>
         <Flex className="flex-col gap-16  p-4">
-          <Flex className="flex-colgap-8 items-start">
+          <Flex className="flex-col gap-8 items-start">
             <Flex className="justify-end w-full md:hidden">
               <ThemeSegmentedControl size="1" radius="full" />
             </Flex>
