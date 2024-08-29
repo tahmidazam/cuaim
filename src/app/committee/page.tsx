@@ -13,6 +13,8 @@ import {
 import { Container, Grid, Section } from "@radix-ui/themes";
 import HARSHVIR_GREWAL_PFP from "../../../public/images/committee/harshvirgrewal.jpeg";
 import KESHAV_KEDIA_PFP from "../../../public/images/committee/keshavkedia.jpeg";
+import NEIL_SARDESAI_PFP from "../../../public/images/committee/neilsardesai.jpeg";
+import SHARON_HO_PFP from "../../../public/images/committee/sharonho.jpeg";
 import TAHMID_AZAM_PFP from "../../../public/images/committee/tahmidazam.jpeg";
 import ZOYA_YASMINE_PFP from "../../../public/images/committee/zoyayasmine.jpeg";
 
@@ -33,9 +35,9 @@ export default function CommitteePage() {
               md: "3",
             }}
           >
-            <CommitteeMemberCell {...NEIL_SARDESAI} />
+            <CommitteeMemberCell {...NEIL_SARDESAI} pfp={NEIL_SARDESAI_PFP} />
             <CommitteeMemberCell {...JUSTINE_CHAN} />
-            <CommitteeMemberCell {...SHARON_HO} />
+            <CommitteeMemberCell {...SHARON_HO} pfp={SHARON_HO_PFP} />
             <CommitteeMemberCell {...ZOYA_YASMINE} pfp={ZOYA_YASMINE_PFP} />
             <CommitteeMemberCell {...ARZINA_ISMAILI} />
             <CommitteeMemberCell

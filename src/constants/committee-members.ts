@@ -3,7 +3,19 @@ import { CommitteeMember } from "@/interfaces/committee-member";
 export const NEIL_SARDESAI: CommitteeMember = {
   name: "Neil Sardesai",
   role: "President",
-  headline: "Clinical School, 4th Year; BA in Engineering",
+  headline:
+    "University of Cambridge School of Clinical Medicine, 4th Year; BA in Engineering",
+  bio: "Neil is a 4th year medical student at the University of Cambridge with a BA in Engineering. He has conducted research in Medical AI at Harvard Medical School, and has previously worked in MedTech consulting, and is looking forward to applying this knowledge to grow the AI in Medicine Society. Neil is particularly passionate about harnessing AI to address healthcare disparities across diverse populations.",
+  contact: [
+    {
+      href: "mailto:nas60@cam.ac.uk",
+      label: "Email",
+    },
+    {
+      href: "https://www.linkedin.com/in/neil-sardesai/",
+      label: "LinkedIn",
+    },
+  ],
 };
 
 export const JUSTINE_CHAN: CommitteeMember = {
@@ -13,7 +25,16 @@ export const JUSTINE_CHAN: CommitteeMember = {
 
 export const SHARON_HO: CommitteeMember = {
   name: "Sharon Ho",
+  headline:
+    "University of Cambridge School of Clinical Medicine, 5th Year, MEng",
   role: "Treasurer",
+  bio: '> _"I\'m a 5th year medical student with a MEng in Bioengineering and Information Engineering. I was the president of AI in Medicine Society in 2023–2024. I am very interested in MedTech and AI in Medicine and wish to apply the Engineering toolbox to Medicine."_',
+  contact: [
+    {
+      href: "https://www.linkedin.com/in/sharon-ho-a260a1192/",
+      label: "LinkedIn",
+    },
+  ],
 };
 
 export const ZOYA_YASMINE: CommitteeMember = {
