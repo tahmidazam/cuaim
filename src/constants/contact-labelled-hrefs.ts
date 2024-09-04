@@ -17,12 +17,12 @@ export const CONTACT_LABELLED_HREFS: ContactLabelledHref[] = [
     handle: "@aiinmedicinesoc",
   },
   {
-    href: "https://www.linkedin.com/company/cuaim/",
+    href: "https://www.linkedin.com/company/cambridge-university-ai-in-medicine-society/",
     label: "LinkedIn",
     handle: "Cambridge University AI in Medicine Society",
   },
   {
-    href: "https://www.facebook.com/AIinMedicine",
+    href: "https://www.facebook.com/profile.php?id=61565291279223",
     label: "Facebook",
     handle: "Cambridge University AI in Medicine Society",
   },
