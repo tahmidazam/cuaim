@@ -4,6 +4,7 @@ import {
   GlobeIcon,
   InstagramLogoIcon,
   LinkedInLogoIcon,
+  MobileIcon,
   TwitterLogoIcon,
 } from "@radix-ui/react-icons";
 
@@ -15,4 +16,5 @@ export const SOCIAL_ICON_MAP = {
   twitter: TwitterLogoIcon,
   github: GitHubLogoIcon,
   website: GlobeIcon,
+  telephone: MobileIcon,
 };

@@ -68,6 +68,14 @@ export const ZOYA_YASMINE: CommitteeMember = {
 export const ARZINA_ISMAILI: CommitteeMember = {
   name: "Arzina Ismaili",
   role: "Engineering Representative",
+  headline: "Engineering",
+  bio: "> _Hello! I am Arzina and I am a fourth year in engineering. I am excited to be on the CU AIM committee as the engineering rep, so that I can collaborate with engineers and to explore the use AI to help humanity._",
+  contact: [
+    {
+      href: "www.linkedin.com/in/arzina-ismaili-6211821b3",
+      label: "LinkedIn",
+    },
+  ],
 };
 
 export const HARSHVIR_GREWAL: CommitteeMember = {
@@ -139,7 +147,7 @@ export const BHARATH_SIVASRITHARAN: CommitteeMember = {
     {
       href: "https://www.instagram.com/bharbear_/",
       label: "Instagram",
-      handle: "bharbear_",
+      handle: "@bharbear_",
     },
   ],
 };
