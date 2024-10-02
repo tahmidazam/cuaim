@@ -21,6 +21,15 @@ export const NEIL_SARDESAI: CommitteeMember = {
 export const JUSTINE_CHAN: CommitteeMember = {
   name: "Justine Chan",
   role: "Secretary",
+  headline: "University of Cambridge School of Clinical Medicine, 5th Year",
+  bio: "> _I’m a year 5 medical student with a strong interest in programming and the application of AI to medicine! I believe that there is so much potential for it to revolutionise the way we practice medical care. I hope to spread interest in this amongst my fellow students!_",
+  contact: [
+    {
+      href: "mailto:jtnc2@cam.ac.uk",
+      label: "Email",
+      handle: "jtnc2@cam.ac.uk",
+    },
+  ],
 };
 
 export const SHARON_HO: CommitteeMember = {
@@ -116,6 +125,25 @@ export const TAHMID_AZAM: CommitteeMember = {
   ],
 };
 
+export const BHARATH_SIVASRITHARAN: CommitteeMember = {
+  name: "Bharath Sivasritharan",
+  role: "Publicity Officer",
+  headline: "MedST II, Pharmacology",
+  bio: "> _Hi! I'm doing Part II Pharmacology and I'm very interested in AI/ML-driven routes of drug development and pharmacogenetic profiling to improve the efficacy, equity and sustainability of new and existing therapeutics!_",
+  contact: [
+    {
+      href: "mailto:bs732@cam.ac.uk",
+      label: "Email",
+      handle: "bs732@cam.ac.uk",
+    },
+    {
+      href: "https://www.instagram.com/bharbear_/",
+      label: "Instagram",
+      handle: "bharbear_",
+    },
+  ],
+};
+
 export const COMMITTEE_MEMBERS: CommitteeMember[] = [
   NEIL_SARDESAI,
   JUSTINE_CHAN,
@@ -125,4 +153,5 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
   HARSHVIR_GREWAL,
   KESHAV_KEDIA,
   TAHMID_AZAM,
+  BHARATH_SIVASRITHARAN,
 ];

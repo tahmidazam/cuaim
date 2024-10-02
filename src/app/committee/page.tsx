@@ -2,6 +2,7 @@ import CommitteeMemberCell from "@/components/committee-member-cell";
 import PageHeader from "@/components/page-header";
 import {
   ARZINA_ISMAILI,
+  BHARATH_SIVASRITHARAN,
   HARSHVIR_GREWAL,
   JUSTINE_CHAN,
   KESHAV_KEDIA,
@@ -17,7 +18,8 @@ import NEIL_SARDESAI_PFP from "../../../public/images/committee/neilsardesai.jpe
 import SHARON_HO_PFP from "../../../public/images/committee/sharonho.jpeg";
 import TAHMID_AZAM_PFP from "../../../public/images/committee/tahmidazam.jpeg";
 import ZOYA_YASMINE_PFP from "../../../public/images/committee/zoyayasmine.jpeg";
-
+import BHARATH_SIVASRITHARAN_PFP from "../../../public/images/committee/bharathsivasritharan.jpeg";
+import JUSTINE_CHAN_PFP from "../../../public/images/committee/justinechan.jpeg";
 /**
  * A page that lists the committee members.
  */
@@ -36,7 +38,7 @@ export default function CommitteePage() {
             }}
           >
             <CommitteeMemberCell {...NEIL_SARDESAI} pfp={NEIL_SARDESAI_PFP} />
-            <CommitteeMemberCell {...JUSTINE_CHAN} />
+            <CommitteeMemberCell {...JUSTINE_CHAN} pfp={JUSTINE_CHAN_PFP} />
             <CommitteeMemberCell {...SHARON_HO} pfp={SHARON_HO_PFP} />
             <CommitteeMemberCell {...ZOYA_YASMINE} pfp={ZOYA_YASMINE_PFP} />
             <CommitteeMemberCell {...ARZINA_ISMAILI} />
@@ -46,6 +48,10 @@ export default function CommitteePage() {
             />
             <CommitteeMemberCell {...KESHAV_KEDIA} pfp={KESHAV_KEDIA_PFP} />
             <CommitteeMemberCell {...TAHMID_AZAM} pfp={TAHMID_AZAM_PFP} />
+            <CommitteeMemberCell
+              {...BHARATH_SIVASRITHARAN}
+              pfp={BHARATH_SIVASRITHARAN_PFP}
+            />
           </Grid>
         </Container>
       </Section>
