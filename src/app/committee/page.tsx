@@ -20,6 +20,8 @@ import TAHMID_AZAM_PFP from "../../../public/images/committee/tahmidazam.jpeg";
 import ZOYA_YASMINE_PFP from "../../../public/images/committee/zoyayasmine.jpeg";
 import BHARATH_SIVASRITHARAN_PFP from "../../../public/images/committee/bharathsivasritharan.jpeg";
 import JUSTINE_CHAN_PFP from "../../../public/images/committee/justinechan.jpeg";
+import ARZINA_ISMAILI_PFP from "../../../public/images/committee/arzinaismaili.jpeg";
+
 /**
  * A page that lists the committee members.
  */
@@ -41,7 +43,7 @@ export default function CommitteePage() {
             <CommitteeMemberCell {...JUSTINE_CHAN} pfp={JUSTINE_CHAN_PFP} />
             <CommitteeMemberCell {...SHARON_HO} pfp={SHARON_HO_PFP} />
             <CommitteeMemberCell {...ZOYA_YASMINE} pfp={ZOYA_YASMINE_PFP} />
-            <CommitteeMemberCell {...ARZINA_ISMAILI} />
+            <CommitteeMemberCell {...ARZINA_ISMAILI} pfp={ARZINA_ISMAILI_PFP} />
             <CommitteeMemberCell
               {...HARSHVIR_GREWAL}
               pfp={HARSHVIR_GREWAL_PFP}
