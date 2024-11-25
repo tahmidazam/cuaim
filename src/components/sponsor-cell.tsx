@@ -3,6 +3,7 @@ import { Sponsor } from "@/interfaces/sponsor";
 import { Flex, Text } from "@radix-ui/themes";
 import ContactLink from "./contact-link";
 import Image, { StaticImageData } from "next/image";
+import Md from "./md";
 
 export default function SponsorCell({
   sponsor,
@@ -17,7 +18,7 @@ export default function SponsorCell({
         <Image src={logo} alt={sponsor.name} className="max-w-40 mx-auto" />
       )}
 
-      <Flex className="flex-col gap-2">
+      <Flex className="flex-col gap-4">
         <Flex className="flex-col">
           <Text size="2" className="uppercase">
             {sponsor.tier}
@@ -25,7 +26,8 @@ export default function SponsorCell({
           <Text weight="bold">{sponsor.name}</Text>
         </Flex>
 
-        <Text>{sponsor.description}</Text>
+        <Md source={sponsor.description} textSize="2" />
+
         {sponsor.contact && (
           <Flex className="gap-2 flex-wrap">
             {sponsor.contact.map(

@@ -13,12 +13,12 @@ export default function SponsorsPage() {
         <Flex className="flex-col gap-8">
           <SponsorCell sponsor={ORZONE} logo={ORZONE_LOGO} />
 
-          <SponsorCell sponsor={APTA} logo={APTA_LOGO} />
-
           <SponsorCell
             sponsor={UNIVERSITY_OF_CAMBRIDGE}
             logo={UNIVERSITY_OF_CAMBRIDGE_LOGO}
           />
+
+          <SponsorCell sponsor={APTA} logo={APTA_LOGO} />
 
           <Md textSize="2" textColour="gray" filename="sponsors" />
         </Flex>
