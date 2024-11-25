@@ -29,7 +29,8 @@ export const APTA: Sponsor = {
 export const ORZONE: Sponsor = {
   name: "Orzone",
   tier: "platinum",
-  description: "",
+  description:
+    "As the most comprehensive platform for medical assessment, Orzone offers a holistic view of student progression at both individual and cohort levels. It also identifies gaps in education and assesses the quality of learning and teaching, helping faculty continuously improve courses. The platform supports all modalities needed for complex medical curricula, including KBA exams, clinical evaluations, OSCEs, EPAs, assignments, rotations, and peer reviews.\n\nPowered by cutting-edge technology for rapid data exploration, Orzone enables institutions to gather billions of data points from students, educators, and clinicians, delivering real-time analytics and AI insights for informed decision-making.\n\nThe platform can be used standalone or integrated with systems such as Canvas, Moodle, and other learning management systems.\n\nVisit www.orzone.com for more information",
   contact: [
     {
       label: "Website",
