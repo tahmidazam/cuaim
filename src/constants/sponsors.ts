@@ -3,7 +3,8 @@ import { Sponsor } from "@/interfaces/sponsor";
 export const APTA: Sponsor = {
   name: "Apta",
   tier: "bronze",
-  description: "",
+  description:
+    "Apta has secured $2.15 Million pre-seed funding to build the next generation of Artificial Intelligence (AI) co-pilots.\n\nApta is building conversational AI agents that can extract complex insights from data to automate advanced workflows. Their technology is an agentic framework to interface powerful large language models (LLMs) with domain specific, bespoke AI systems working in conjunction to derive deep insights from data that surpasses the superficial analytic capabilities of generalist LLMs.",
   contact: [
     {
       label: "Website",
@@ -63,7 +64,8 @@ export const ORZONE: Sponsor = {
 export const UNIVERSITY_OF_CAMBRIDGE: Sponsor = {
   name: "University of Cambridge",
   tier: "silver",
-  description: "",
+  description:
+    "As a registered society with the University of Cambridge, Cambridge Student Union and School of Clinical Medicine, we receive some operational and financial support through grants and other funds.",
   contact: [
     {
       label: "Website",
